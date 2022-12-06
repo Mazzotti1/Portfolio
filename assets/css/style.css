@@ -68,6 +68,8 @@ width: 50px;
     }
     header.white{
       background-color: rgba(206, 206, 206, 0.5);
+
+
     }
 
 
@@ -178,7 +180,7 @@ flex-direction: column;
 }
 .buttonContact{
   text-decoration: none;
-  color: white;
+  color: rgb(5, 104, 5);
 transition: all 200ms linear 0s;
 font-size: 2rem;
 max-width: 150px;
