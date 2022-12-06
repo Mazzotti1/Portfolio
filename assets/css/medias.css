@@ -260,7 +260,7 @@
             height: 25vh;
         }
         .faleComigo{
-
+            min-height: 800px;
             height: 45vh;
         }
         #conhecimentos{
@@ -336,5 +336,6 @@
 @media (max-height:470px){
     .gifEmail{
         display: none;
+
     }
 }
