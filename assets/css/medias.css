@@ -144,6 +144,7 @@
             margin-top: 5%;
             gap: 0px;
             justify-content: center;
+            gap: 10%;
         }
         .instaFooter, .linkedinFooter, .githubFooter{
             width: 50%;
@@ -324,7 +325,8 @@
 }
 @media (max-height:710px){
     .footerIcons{
-        transform: translate3d(150px, -75px, 0px);
+        transform: translate3d(0px, -5px, 0px);
+        gap: 10%;
     }
 }
 @media (max-height:630px){
