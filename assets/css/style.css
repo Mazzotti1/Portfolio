@@ -177,6 +177,8 @@ flex-direction: column;
     margin-bottom: 10px;
 }
 .buttonContact{
+  text-decoration: none;
+  color: white;
 transition: all 200ms linear 0s;
 font-size: 2rem;
 max-width: 150px;
