@@ -112,8 +112,7 @@ moonIcon.classList.replace('bx-moon', 'bx-sun');
 
 const menuSection = document.querySelector(".menu-section")
 const menuToggle = menuSection.querySelector(".menu-toggle")
-const paragrafoHome = document.querySelector(".paragrafoMenu")
-disquete = document.querySelector(".disquete")
+
 menuToggle.addEventListener("click", () =>{
     menuSection.classList.toggle("on", show)
     show = !show;

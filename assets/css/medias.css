@@ -249,7 +249,7 @@
             margin-left: 5%;
         }
         .paragrafoMenu{
-            position: relative;
+
             right: 5%;
         }
         header{
@@ -319,11 +319,15 @@
             font-size: 1.4rem;
         }
         .disquete{
-
+            margin-top: 15%;
             left: 31%;
         }
 }
 @media (max-height:710px){
+    header{
+        height: 20vh;
+    }
+
     .footerIcons{
         transform: translate3d(0px, -5px, 0px);
         gap: 10%;
