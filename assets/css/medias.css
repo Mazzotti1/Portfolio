@@ -1,0 +1,321 @@
+
+
+    @media (min-width:1440px){
+        header .logo{
+        box-shadow: -3px 4px 0 rgb(255, 255, 255), -5px 7px 0 rgb(255, 255, 255);
+        transition: all 250ms linear 0s;
+        }
+        header .logo:hover{
+            cursor:pointer;
+            box-shadow: -3px 1px 0 rgb(255, 255, 255), -1px 1px 0 rgb(255, 255, 255);
+            text-decoration-line: underline;
+            font-weight: bold;
+          }
+        header nav ul li a{
+            border:2px solid #333;
+            box-shadow: -3px 4px 0 rgb(255, 255, 255), -5px 7px 0 rgb(255, 255, 255);
+            transition: all 250ms linear 0s;
+        }
+        nav a:hover{
+            border:2px solid #333;
+            box-shadow: -1px 1px 0 rgb(255, 255, 255), -1px 1px 0 rgb(255, 255, 255);
+            text-decoration-line: underline;
+            font-weight: bold;
+         }
+    }
+    @media (max-width:1025px){
+
+       main{
+          height: 140vh;
+        }
+        .card{
+            width: 65%;
+            margin-left: 20%;
+        }
+
+        .picture{
+            width: 32%;
+            height: 35%;
+        }
+        html{
+    font-size: 50%;
+        }
+        header nav ul li {
+        list-style: none;
+        text-align: center;
+        width: 130px;
+        }
+        header nav ul li a{
+            box-shadow: none;
+            border: none;
+        }
+    }
+    @media (max-width:851px){
+
+
+        .picture{
+            width: 35%;
+            height: 30%;
+        }
+         nav{
+             display: none;
+         }
+         .one,
+         .two,
+         .three{
+             background-color: rgb(35, 145, 31);
+             height: 5px;
+             width: 100%;
+             margin: 6px auto;
+
+             transition-duration: 0.3s ;
+         }
+
+         .menu-toggle{
+             width: 40px;
+             height: 30px;
+             margin-right: 20px;
+         }
+
+         /*fullscreen*/
+         .menu-section.on{
+             position: absolute;
+             top:0;
+             left: 0;
+             width: 100vw;
+             height: 80vh;
+             background-color: rgb(11, 26, 11);
+             z-index:10;
+             display: flex;
+             justify-content: center;
+             align-items: center;
+            transition: all 0.4s;
+         }
+
+         .menu-section.on nav{
+             display: block;
+         }
+         .menu-section.on .menu-toggle{
+             position: absolute;
+             right: 35px;
+             top: 40px;
+         }
+         .menu-section.on .menu-toggle .one{
+             transform: rotate(45deg) translate(7px, 7px);
+         }
+         .menu-section.on .menu-toggle .two{
+             opacity: 0;
+         }
+         .menu-section.on .menu-toggle .three{
+             transform: rotate(-45deg) translate(9px, -9px);
+         }
+         .menu-section.on nav ul{
+             text-align: center;
+             display: block;
+         }
+         .menu-section.on nav a{
+            transition-duration:0.5s ;
+            font-size: 3rem;
+            line-height: 4rem;
+            display: block;
+            color: white;
+         }
+    }
+    @media (max-width:685px){
+        header{
+            background-color: black;
+            position: initial;
+        }
+
+        main{
+            min-height: 270vh;
+
+        }
+        .gifEmail{
+            left: 65%;
+        }
+        .tittleMenu{
+            margin-left: 22%;
+        }
+        .footerIcons{
+            margin-top: 5%;
+            gap: 0px;
+            justify-content: center;
+        }
+        .instaFooter, .linkedinFooter, .githubFooter{
+            width: 50%;
+        }
+        .paragrafoAbout {
+            font-size: 1.7rem;
+
+        }
+        .buttonContact{
+            width: 40%;
+            margin-left: 25%;
+        }
+        .disquete{
+            top: 5%;
+            left: 37%;
+        }
+        .paragrafoMenu{
+            width:100% ;
+            text-align: center;
+        }
+        .containerIcon{
+            position: absolute;
+            left: 2%;
+            top: 12%;
+    }
+
+    }
+    @media (max-width:571px){
+        .imgArrowUp {
+            width: 40px;
+            margin-left: 50%;
+        }
+        header{
+            background-color: black;
+            position: initial;
+        }
+        main{
+            height: 90vh;
+        }
+        .gifEmail{
+            left: 25%;
+            padding-top: 60%;
+        }
+
+        .picture{
+            height: 15%;
+        }
+        .containerMenu{
+            text-align: center;
+        }
+        .nameFooter{
+            font-size: 1.7rem;
+        }
+        .paragrafoFooter{
+            font-size: 1.4rem;
+        }
+     #conhecimentos{
+     height: 115vh;
+
+    }
+    .tittleAbout{
+        font-size: 2rem;
+    }
+    .paragrafoAbout {
+        font-size: 1.7rem;
+
+    }
+     }
+    @media (max-width:390px){
+        #projetos{
+            height: 1100px;
+        }
+
+        .menu-section{
+            color: black;
+        }
+        .toggle-btn.active .toggle-icon{
+            left: calc(100% - 30px + 8px);
+        }
+        .toggle-btn .toggle-icon{
+            height: 20px;
+            width: 20px;
+            left:1px;
+        }
+        .toggle-btn{
+            height: 25px;
+            width: 40px;
+            left: 6px;
+            bottom: 4%;
+        }
+        .imgArrowUp {
+            width: 35px;
+            margin-left: 90%;
+        }
+        .footerIcons{
+            margin-right: 35%;
+        }
+        #iconJs{
+            margin-left: 22%;
+        }
+        #iconHTML{
+            margin-left: 5%;
+        }
+        .paragrafoMenu{
+            position: relative;
+            right: 5%;
+        }
+        header{
+            background-color: black;
+            position: initial;
+        }
+        footer{
+            min-width: 320px;
+            height: 15vh;
+        }
+        .faleComigo{
+
+            height: 45vh;
+        }
+        #conhecimentos{
+            min-height: 800px;
+            height: 15vh;
+        }
+        main{
+            height: 220vh;
+            min-height: 1000px;
+        }
+         #about{
+            min-height: 600px;
+            height: 50vh;
+        }
+        #firstBody{
+            min-height: 600px;
+            height: 20vh;
+        }
+        .containerIcon{
+         display: none;
+        }
+        h1.tittleMenu{
+            padding-top: 15%;
+            width: 38%;
+        }
+        .cards{
+            margin-right: 40%;  ;
+        }
+
+        .gifEmail{
+            padding-top: 75%;
+            width: 40%;
+        }
+        .picture{
+            height: 10%;
+            width: 60%;
+        }
+        .nameFooter{
+            font-size: 1.4rem;
+        }
+        .paragrafoFooter{
+            font-size: 1.1rem;
+        }
+
+        .tittleAbout{
+            font-size: 2.9rem;
+
+        }
+        .paragrafoAbout {
+            font-size: 1.4rem;
+            margin: 7%;
+            width: 90%;
+        }
+        a.links{
+            font-size: 1.4rem;
+        }
+        .disquete{
+
+            left: 31%;
+        }
+}

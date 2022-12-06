@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet"   href="./assets/css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
+    <link rel="stylesheet"   href="./assets/css/medias.css">
+    <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=JetBrains Mono' >
+    <link rel="icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAZpJREFUSEu1lT1SwzAQhZ+UIkORYMxBMC0NpOUCcAZR0XEEOirMFeAKNJiGOhwExzgFkxkiMZvxeiRFjpVhnC7W+n3781YWGPgnBtZHNCB5SBI9lm+UkFzpWXVbVTHJRQEs8awRncdCegG2uAE+CSCAEwBRkCDgMD8uDMy53QISH630BT1bj2XRQNoQA1Ms1WLmty0ImOapCYlz36mqEKRW5ZbeTkDohdBgOaEoQNPzBQnxC8ljkmkh7yBwCYNfAK/S6PvqpppTHAPkSh/57nIq8Ae6VGVG4mvIDyFw4LTN4GcEfUaQSZ7OuwbfAnxxGihlM83TZwBXHZ5/qVV57c3EcVcL4CzYLVzq9CmtYTDpACxqVaZ0ZkNsR7UAy5pOBvsAmk3PBMT7t/raWNppkWW9FhLbIhb3O7A1ZBtSq/J0nyH74k4F3ONBbcqQXYvz70WzF8cScwYfuF03oVGbTIGhy45vTzrngdrV2M5xn/d8NfwlasKz0EBDUr3fA3+J6H+seNBFXQVxJXTO10hP8ZvjqApihLpiBgf8AU6CPCjzD4WgAAAAAElFTkSuQmCC"/>
+    <title>Gabriel // Portifólio</title>
+
+<style>
+ #containerIcon{
+        display: flex;
+        gap: 15px;
+      }
+      #instaHeader{
+        transition: all 400ms;
+        color: green;
+      }
+      #instaHeader:hover{
+        transform: translate3d(0, -10px, 0);
+        color: rgb(124, 10, 10);
+      }
+      #linkedinHeader{
+        transition: all 400ms;
+        color: green;
+      }
+      #linkedinHeader:hover{
+        transform: translate3d(0, -10px, 0);
+        color: rgb(40, 132, 185);
+      }
+      #githubHeader{
+        transition: all 400ms;
+        color: green;
+      }
+      #githubHeader:hover{
+        transform: translate3d(0, -10px, 0);
+        color: rgb(184, 114, 10);
+      }
+</style>
+</head>
+    <!-- back to top -->
+<body id="home" >
+  <a class="btn-fixed" href="#home">
+    <span>
+      <img src="assets/icons/arrowUp.png" class="imgArrowUp">
+    </span>
+  </a>
+  <!-- dark mode / white mode -->
+  <div class="toggle-btn">
+    <div class="toggle-icon">
+        <i id="iconSun" class='bx bx-sun bx-md' ></i>
+    </div>
+</div>
+
+    <header>
+        <div class="container">
+          <a href="#home"
+          class="logo" data-anime="left" >Gabriel Mazzotti
+        </a>
+          <div class="menu-section ">
+
+            <div class="menu-toggle">
+              <div class="one"></div>
+              <div class="two"></div>
+              <div class="three"></div>
+            </div>
+            <nav class="menu" data-anime="left">
+              <ul>
+                <li>
+                  <a href="#about">Sobre mim</a>
+                </li>
+                <li>
+                  <a href="#projetos">Projetos</a>
+                </li>
+                <li>
+                  <a href="#conhecimentos">Conhecimentos</a>
+                </li>
+                <li>
+                  <a href="#faleComigo">Fale Comigo</a>
+                </li>
+              </ul>
+            </nav>
+
+          </div>
+          <div id="containerIcon" data-anime="right">
+                <a  href="https://www.instagram.com/omazzotti_/">
+                  <i type="logo" id="instaHeader" class='bx bxl-instagram bx-lg'   ></i>
+                </a>
+                <a  href="https://www.linkedin.com/in/gabriel-mazzotti/">
+                  <i type="solid" id="linkedinHeader" class='bx bxl-linkedin bx-lg'  ></i>
+                </a>
+                <a  href="https://github.com/Mazzotti1">
+                  <i type="logo" id="githubHeader" class='bx bxl-github bx-lg ' ></i>
+                </a>
+           </div>
+        </div>
+      </header>
+<section  id="firstBody" >
+     <div class="containerMenu">
+        <h1  class="tittleMenu" data-anime="left" >Hello World!💻</h1>
+        <p  class="paragrafoMenu"data-anime="left" >Eu sou Gabriel, Desenvolvedor Web.</p>
+        <button class="buttonContact" data-anime="left" type="button" >Fale Comigo!</button>
+    </div><!--containerMenu -->
+    <img class="disquete" data-anime="right" src="assets/icons/disquete.gif" width="150" height="150">
+</section>
+
+<section id="about" >
+
+          <div class="containerAbout">
+
+            <div class="boxImage" alt="Foto de perfil">
+            </div>
+                <div class="text"  >
+                  <h3 class="tittleAbout" data-anime="left" >Sobre mim</h3>
+                <p class="paragrafoAbout" data-anime="top" >Me chamo Gabriel, tenho 20 anos, adquiri experiência com design gráfico e design de páginas trabalhando como freelancer
+                  utilizando Figma e a plataforma do Wordpress, já trabalhei como freelancer atuando como editor de vídeos e tenho experiências em vendas. Comecei na programação
+                  pelo desenvolvimento web, e cada vez mais fui desenvolvendo uma curiosidade para criar tecnologias que facilitassem meu trabalho, tenho muito para aprender
+                  para otimizar os meus projetos com o Javascript e o Typescript, e tenho uma imensa curiosidade para aplicar meus conhecimentos e entender sobre desenvolvimento mobile.
+                </p>
+            </div>
+            <img class="picture" data-anime="top" src="./assets/icons/perfil.jpg" >
+        </div><!--containerAbout -->
+</section>
+
+<main id="projetos">
+  <h1 class="tittleCard" data-anime="left">Projetos</h1>
+<section class="cards" data-anime="top">
+
+  <div class="card"  >
+
+    <div class="image">
+      <img src="./assets/icons/build.png" />
+    </div>
+    <div class="content">
+      <p class="title text--medium">
+        Jogo da Memória com Html, Css E Javascript | Gabriel Mazzotti
+      </p>
+    </div>
+    <div class="info">
+      <a class="linkGit" target="_blank" rel="noopener noreferrer" href="">
+     <img src="./assets/icons/github-logo.png"   class="gitCard">
+    </a>
+    <a class="linkCard" target="_blank" rel="noopener noreferrer" href="">
+     <img src="./assets/icons/eye.png"  class="vercelCard">
+    </a>
+    </div>
+  </div>
+</section>
+</main>
+
+ <section id="conhecimentos">
+            <h1 class="tittleConhecimentos"data-anime="left" >Conhecimentos</h1>
+            <div class="cardsConhecimentos" data-anime="top">
+                <div class="cardTec"  >
+                    <h1 class="tittleTec">HTML5</h1>
+                    <p class="paragraphTec">HTML5 é uma linguagem de marcação de hipertexto, que usamos para marcar os elementos da página e construí-la.</p>
+                    <div id="iconHtml" >
+                    <i  class="devicon-html5-plain"></i>
+                    </div>
+                </div>
+                <div class="cardTec" id="css">
+                    <h1 class="tittleTec">CSS3</h1>
+                    <p class="paragraphTec" >CSS3 é uma linguagem de estilo usada para descrever a apresentação dos elementos da página os estilizando.</p>
+                    <div id="iconHtml" >
+                    <i id="iconCss" class="devicon-css3-plain"></i>
+                    </div>
+                </div>
+                <div class="cardTec" id="js">
+                    <h1 class="tittleTec">JavaScript</h1>
+                    <p class="paragraphTec">JavaScript é uma linguagem de programação interpretada usada no desenvolvimento web para descrever funcionalidades e comportamentos da página.</p>
+                    <div id="iconJs" >
+                    <i id="iconJs" class="devicon-javascript-plain"></i>
+                     </div>
+                </div>
+            </div>
+    </section>
+
+    <section id="faleComigo">
+        <div class="containerContact">
+          <div class="containerGif" data-anime="top">
+            <img class="gifEmail" src="assets/icons/email.gif" alt="Gif email">
+          </div>
+            <h1 class="tittleContact" data-anime="left">Fale Comigo!</h1>
+            <a  class="links" href="tel:+5551994447857" data-anime="left">
+                <img class="iconLink" src="/portifolio/assets/icons/smartphone.png">
+                55 51 99444-7857
+            </a>
+            <a target="_blank" rel="noopener noreferrer" class="links" data-anime="left"  href="mailto:gmazzottidesouza@gmail.com?subject=Olá Gabriel!">
+                <img class="iconLink"  src="/portifolio/assets/icons/email.png">
+                gmazzottidesouza@gmail.com
+            </a>
+            <a target="_blank" rel="noopener noreferrer" href="https://api.whatsapp.com/send?phone=5551994447857">
+                <button class="whatsBtn" data-anime="left">  Whatsapp</button>
+            </a>
+        </div>
+    </section>
+
+    <footer>
+<style>
+  #instaFooter{
+  transition: all 400ms;
+  color: green;
+}
+#instaFooter:hover{
+transform: translate3d(0, -10px, 0);
+color: rgb(124, 10, 10);
+}
+#linkedinFooter{
+  transition: all 400ms;
+  color: green;
+}
+#linkedinFooter:hover{
+transform: translate3d(0, -10px, 0);
+color: rgb(40, 132, 185);
+  }
+#githubFooter{
+  transition: all 400ms;
+  color: green;
+}
+#githubFooter:hover{
+transform: translate3d(0, -10px, 0);
+color: rgb(184, 114, 10);
+  }
+
+</style>
+      <div class="containerFooter">
+        <div>
+          <h1 class="nameFooter">Gabriel Mazzotti</h1>
+              <p class="paragrafoFooter" id="sizeP">©2022 por Gabriel Mazzotti.
+              <br> Todos os direitos reservados.</p>
+
+        <div class="footerIcons">
+          <a target="_blank" rel="noopener noreferrer"  href="https://www.instagram.com/omazzotti_/">
+            <i id="instaFooter" class='bx bxl-instagram bx-lg'  ></i></a>
+          </a>
+          <a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/gabriel-mazzotti/">
+            <i id="linkedinFooter" class='bx bxl-linkedin bx-lg'  ></i></a>
+          </a>
+          <a target="_blank" rel="noopener noreferrer" href="https://github.com/Mazzotti1">
+            <i id="githubFooter" class='bx bxl-github bx-lg'  ></i></a>
+          </a>
+      </div>
+
+   </footer>
+
+
+ <script  src="assets/script/menu.js"></script>
+ <script   src="assets/script/projetos.js"></script>
+</body>
+
+
+
+
+
+
+</html>
