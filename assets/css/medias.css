@@ -1,66 +1,11 @@
 
-
-    @media (min-width:1440px){
-
-        header .logo{
-        box-shadow: -3px 4px 0 rgb(255, 255, 255), -5px 7px 0 rgb(255, 255, 255);
-        transition: all 250ms linear 0s;
-        }
-        header .logo:hover{
-            cursor:pointer;
-            box-shadow: -3px 1px 0 rgb(255, 255, 255), -1px 1px 0 rgb(255, 255, 255);
-            text-decoration-line: underline;
-            font-weight: bold;
-          }
-        header nav ul li a{
-            border:2px solid #333;
-            box-shadow: -3px 4px 0 rgb(255, 255, 255), -5px 7px 0 rgb(255, 255, 255);
-            transition: all 250ms linear 0s;
-        }
-        nav a:hover{
-            border:2px solid #333;
-            box-shadow: -1px 1px 0 rgb(255, 255, 255), -1px 1px 0 rgb(255, 255, 255);
-            text-decoration-line: underline;
-            font-weight: bold;
-         }
-    }
-    @media (max-width:1025px){
-
-       main{
-          height: 140vh;
-        }
-        .card{
-            width: 65%;
-            margin-left: 20%;
-        }
-
-        .picture{
-            width: 32%;
-            height: 35%;
-        }
-        html{
-    font-size: 50%;
-        }
-        header nav ul li {
-        list-style: none;
-        text-align: center;
-        width: 130px;
-        }
-        header nav ul li a{
-            box-shadow: none;
-            border: none;
-        }
-    }
     @media (max-width:851px){
-
-
-        .picture{
-            width: 35%;
-            height: 30%;
+        .paragrafoAbout{
+            font-size: 2rem;
         }
-         nav{
-             display: none;
-         }
+        div.menu-section a{
+            display: none;
+        }
          .one,
          .two,
          .three{
@@ -125,224 +70,135 @@
          }
 
     }
-    @media (max-width:685px){
-        header{
-            background-color: black;
-            position: initial;
+
+    @media (max-width:425px){
+        .footerIcons{
+            gap: 25px;
+            justify-content: center;
+            margin-right: 10%;
+            padding-top: 8%;
+
         }
-
-        main{
-            min-height: 270vh;
-
+        .paragrafoFooter{
+            margin-left: 16%;
+            text-align: center;
+            margin-top: 6%;
+        }
+        .nameFooter{
+            margin-left: 25%;
         }
         .gifEmail{
-            left: 65%;
+            width: 29%;
+            left: 17%;
+            padding-top: 65%;;
         }
-        .tittleMenu{
-            margin-left: 22%;
+        .cardsConhecimentos{
+            width: 80%;
+            margin-left: 13%;
+
         }
-        .footerIcons{
-            margin-top: 5%;
-            gap: 0px;
-            justify-content: center;
-            gap: 10%;
+        .tittleConhecimentos{
+            font-size: 3rem;
         }
-        .instaFooter, .linkedinFooter, .githubFooter{
-            width: 50%;
+        main{
+            height: 150vh;
         }
-        .paragrafoAbout {
+        .cards{
+            margin-left: 8%;
+        }
+        .tittleCard{
+            font-size: 3.5rem;
+        }
+        .picture{
+            width: 45%;
+            margin-top: 15%;
+        }
+        .paragrafoAbout{
+            width: 80%;
+            margin-left: 13%;
             font-size: 1.7rem;
+        }
+        .tittleAbout{
+            font-size: 2.5rem;
+        }
+        .menu-toggle{
+            margin-right: -10px;
 
         }
         .buttonContact{
-            width: 40%;
             margin-left: 25%;
         }
         .disquete{
-            top: 5%;
-            left: 37%;
-        }
-        .paragrafoMenu{
-            width:100% ;
-            text-align: center;
-        }
-        .containerIcon{
-            position: absolute;
-            left: 2%;
-            top: 12%;
-    }
+         bottom: -15%;
+         left: 33%;
 
-    }
-    @media (max-width:571px){
-        .imgArrowUp {
-            width: 40px;
-            margin-left: 50%;
-        }
-        header{
-            background-color: black;
-            position: initial;
-        }
-        main{
-            height: 90vh;
-        }
-        .gifEmail{
-            left: 25%;
-            padding-top: 60%;
-        }
-
-        .picture{
-            height: 15%;
         }
         .containerMenu{
+            margin-left: 10%;
+        }
+        .tittleMenu {
+            margin-top: 35%;
             text-align: center;
-        }
-        .nameFooter{
-            font-size: 1.7rem;
-        }
-        .paragrafoFooter{
-            font-size: 1.4rem;
-        }
-     #conhecimentos{
-     height: 115vh;
-
-    }
-    .tittleAbout{
-        font-size: 2rem;
-    }
-    .paragrafoAbout {
-        font-size: 1.7rem;
-
-    }
-     }
-    @media (max-width:390px){
-        #projetos{
-            height: 1100px;
-        }
-
-        .menu-section{
-            color: black;
-        }
-        .toggle-btn.active .toggle-icon{
-            left: calc(100% - 30px + 8px);
-        }
-        .toggle-btn .toggle-icon{
-            height: 20px;
-            width: 20px;
-            left:1px;
-        }
-        .toggle-btn{
-            height: 25px;
-            width: 40px;
-            left: 6px;
-            bottom: 4%;
-        }
-        .imgArrowUp {
-            width: 35px;
-            margin-left: 90%;
-        }
-        .footerIcons{
-            margin-right: 35%;
-        }
-        #iconJs{
-            margin-left: 22%;
-        }
-        #iconHTML{
-            margin-left: 5%;
-        }
-        .paragrafoMenu{
-
-            right: 5%;
-        }
-        header{
-            background-color: black;
-            position: initial;
-        }
-        footer{
-            min-width: 320px;
-            height: 25vh;
-        }
-        .faleComigo{
-            min-height: 800px;
-            height: 45vh;
-        }
-        #conhecimentos{
-            min-height: 800px;
-            height: 15vh;
-        }
-        main{
-            height: 220vh;
-            min-height: 1000px;
-        }
-         #about{
-            min-height: 600px;
-            height: 50vh;
-        }
-        #firstBody{
-            min-height: 600px;
-            height: 20vh;
-        }
-        .containerIcon{
-         display: none;
-        }
-        h1.tittleMenu{
-            padding-top: 15%;
-            width: 38%;
-        }
-        .cards{
-            margin-right: 40%;  ;
-        }
-
-        .gifEmail{
-            padding-top: 75%;
-            width: 40%;
-        }
-        .picture{
-            height: 10%;
-            width: 60%;
-        }
-        .nameFooter{
-            font-size: 1.4rem;
-        }
-        .paragrafoFooter{
-            font-size: 1.1rem;
-        }
-
-        .tittleAbout{
-            font-size: 2.9rem;
-
-        }
-        .paragrafoAbout {
-            font-size: 1.4rem;
-            margin: 7%;
             width: 90%;
         }
-        a.links{
-            font-size: 1.4rem;
+        .paragrafoMenu{
+            width: 90%;
+            text-align: center;
+
+        }
+    }
+
+    @media (max-width:375px){
+        .menu-toggle{
+            margin-right: 30px;
+        }
+        .cards{
+            margin-left: 5%;
+        }
+        .cardsConhecimentos{
+            margin-left: 12%;
+        }
+    }
+
+    @media (max-width:320px){
+        .paragrafoFooter{
+            margin-left: 6%;
+        }
+        .nameFooter{
+            margin-left: 20%;
+        }
+        .links{
+            font-size: 1.3rem;
+        }
+        .tittleContact{
+            font-size: 2.6rem;
+        }
+        .gifEmail{
+
+            padding-top: 75%;
+
+        }
+        .cards{
+            margin-left: 0%;
+        }
+        .picture{
+            margin-top: 5%;
         }
         .disquete{
-            margin-top: 15%;
-            left: 31%;
+            left: 29%;
         }
-}
-@media (max-height:710px){
-    header{
-        height: 20vh;
+        .buttonContact{
+            margin-left: 20%;
+        }
+        .paragrafoMenu{
+            width: 100%;
+        }
+        .tittleMenu{
+            width: 99%;
+            margin-left: -3%;
+            margin-top: 45%;
+        }
+        .menu-toggle{
+            margin-right: 15px;
+        }
     }
-
-    .footerIcons{
-        transform: translate3d(0px, -5px, 0px);
-        gap: 10%;
-    }
-}
-@media (max-height:630px){
-    .gifEmail {
-        width: 20%;
-        transform: translate3d(0px, -25px, 0px);
-    }
-}
-@media (max-height:470px){
-    .gifEmail{
-        display: none;
-
-    }
-}
