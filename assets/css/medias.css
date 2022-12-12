@@ -72,6 +72,22 @@
     }
 
     @media (max-width:425px){
+        .toggle-btn.active .toggle-icon{
+            left: calc((80% + 30px) - 50px);
+        }
+        .toggle-btn .toggle-icon{
+            height: 25px;
+            width: 25px;
+        }
+        .toggle-btn{
+            left: 10px;
+            height: 30px;
+            width: 60px;
+        }
+        .imgArrowUp{
+            width: 35px;
+            margin-right: -50px;
+        }
         .footerIcons{
             gap: 25px;
             justify-content: center;
@@ -149,6 +165,9 @@
     }
 
     @media (max-width:375px){
+        .buttonContact{
+            margin-left: 18%;
+        }
         .menu-toggle{
             margin-right: 30px;
         }
@@ -161,6 +180,10 @@
     }
 
     @media (max-width:320px){
+        .imgArrowUp{
+            width: 30px;
+
+        }
         .paragrafoFooter{
             margin-left: 6%;
         }
