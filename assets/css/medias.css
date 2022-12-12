@@ -72,6 +72,7 @@
     }
 
     @media (max-width:425px){
+
         .toggle-btn.active .toggle-icon{
             left: calc((80% + 30px) - 50px);
         }
@@ -108,6 +109,7 @@
             left: 17%;
             padding-top: 65%;;
         }
+
         .cardsConhecimentos{
             width: 80%;
             margin-left: 13%;
@@ -117,6 +119,7 @@
             font-size: 3rem;
         }
         main{
+
             height: 150vh;
         }
         .cards{
@@ -224,4 +227,9 @@
         .menu-toggle{
             margin-right: 15px;
         }
+    }
+    @media (max-height:900px) {
+       main{
+        height: 240vh;
+       }
     }
