@@ -154,6 +154,7 @@
         }
         .containerMenu{
             margin-left: 10%;
+
         }
         .tittleMenu {
             margin-top: 35%;
@@ -164,12 +165,22 @@
             width: 90%;
             text-align: center;
 
+
         }
     }
 
     @media (max-width:375px){
+
+        .paragrafoMenu{
+            width: 100%;
+            margin-left: -2%;
+        }
+        .tittleMenu{
+            width: 100%;
+            margin-left: -5%;
+        }
         .buttonContact{
-            margin-left: 18%;
+            margin-left: 24%;
         }
         .menu-toggle{
             margin-right: 30px;
