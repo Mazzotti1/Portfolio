@@ -5,7 +5,7 @@ e criar um repositório para as pessoas ter experiências ativas com meus projet
 
 <table>
     <td>
-     pode visualizar ele aqui 💻 <a href="https://gabrielmazzotti.vercel.app/"</a>
+     pode visualizar ele <a href="https://gabrielmazzotti.vercel.app/">aqui 💻</a>
     </td>
 </table>
 
