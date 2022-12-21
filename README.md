@@ -1,7 +1,13 @@
 ## Sobre
 
 Este projeto foi feito para aplicar meus conhecimentos sobre desenvolvimento web<br>
-e criar um repositório para as pessoas ter experiências ativas com meus projetos.
+e criar um repositório para as pessoas ter experiências ativas com meus projetos.<br>
+
+<table>
+    <td>
+     pode visualizar ele <a href="https://gabrielmazzotti.vercel.app/">aqui 💻</a>
+    </td>
+</table>
 
 ##  O site é composto por:
 
