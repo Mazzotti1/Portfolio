@@ -20,12 +20,19 @@ const gifs = [
     link:"https://jogo-da-velha-plum-phi.vercel.app/"
   },
   {
+    title: "Página de Registro/login com banco de dados",
+    thumb: "./assets/icons/login.gif",
+    gif_id: "3",
+    link:"https://github.com/Mazzotti1/API-REST-Login",
+    git:"https://github.com/Mazzotti1/API-REST-Login"
+  },
+  {
     title: "Projeto em desenvolvimento, procurando evoluir sempre!",
     thumb: "./assets/icons/build.png",
     gif_id: "3",
     link:"#home",
     git:"#home"
-  },
+  }
 
 ];
 
