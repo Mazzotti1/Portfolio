@@ -5,31 +5,38 @@ const card = document.querySelector("div.card");
 
 const gifs = [
   {
-    title: "Jogo da memoria com Html, JS puro e CSS Animation <br><br>",
-    thumb: "./assets/icons/jogo da memoria.gif",
+    title: "Página de Chat com Socket.io",
+    thumb: "./assets/icons/chat.gif",
     gif_id: "1",
-    git:"https://github.com/Mazzotti1/Jogo-da-memoria",
-    link:"https://jogo-da-memoria-liard.vercel.app/",
-
-  },
-  {
-    title: "Jogo da velha com HTML, Css e JS <br><br><br>",
-    thumb: "./assets/icons/jogo da velha.gif",
-    gif_id: "2",
-    git:"https://github.com/Mazzotti1/JogoDaVelha",
-    link:"https://jogo-da-velha-plum-phi.vercel.app/"
+    link:"https://github.com/Mazzotti1/Chat",
+    git:"https://github.com/Mazzotti1/Chat"
   },
   {
     title: "Página de Registro/login com banco de dados",
     thumb: "./assets/icons/login.gif",
-    gif_id: "3",
+    gif_id: "2",
     link:"https://github.com/Mazzotti1/API-REST-Login",
     git:"https://github.com/Mazzotti1/API-REST-Login"
   },
   {
+    title: "Jogo da memoria com Html, JS puro e CSS Animation <br><br>",
+    thumb: "./assets/icons/jogo da memoria.gif",
+    gif_id: "3",
+    git:"https://github.com/Mazzotti1/Jogo-da-memoria",
+    link:"https://jogo-da-memoria-liard.vercel.app/",
+  },
+  {
+    title: "Jogo da velha com HTML, Css e JS <br><br><br>",
+    thumb: "./assets/icons/jogo da velha.gif",
+    gif_id: "4",
+    git:"https://github.com/Mazzotti1/JogoDaVelha",
+    link:"https://jogo-da-velha-plum-phi.vercel.app/"
+  },
+
+  {
     title: "Projeto em desenvolvimento, procurando evoluir sempre!",
     thumb: "./assets/icons/build.png",
-    gif_id: "3",
+    gif_id: "5",
     link:"#home",
     git:"#home"
   }
