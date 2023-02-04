@@ -16,7 +16,7 @@
 
 }
 
-@media (max-width:390px){
+@media (max-width:414px){
     .titleHome{
         font-size:20px;
     }
@@ -133,9 +133,13 @@
 
 
 @media (max-height:900px) {
-
+    .HomeMenu{
+        margin-top:20px
+    }
  }
 
  @media (max-height:580px) {
-
+    .HomeMenu{
+        margin-top:20px
+    }
  }
