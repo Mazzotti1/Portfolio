@@ -38,7 +38,7 @@ export function KnowledgeMenu({ name, setId, language }: KnowledgeMenuProps) {
                 <h1 className="categoryTittle text-center text-xl">{language === 'pt' ? pt.Category : en.Category}</h1>
                 </Text>
               {allTypes.map((tech) => (
-          <button onClick={() => setId(tech.id)}  className="text-black    justify-center  border border-fonteVerde p-6 bg-white item w-24 rounded-md  hover:text-white hover:bg-black  duration-700 transition-all">{tech.name}</button>
+          <button onClick={() => setId(tech.id)}  className=" text-black    justify-center  border border-fonteVerde p-6 bg-white item w-20 rounded-md  hover:text-white hover:bg-black  duration-700 transition-all">{tech.name}</button>
 
         ))}
 

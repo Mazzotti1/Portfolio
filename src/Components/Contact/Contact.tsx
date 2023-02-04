@@ -15,7 +15,7 @@ export const Contact: React.FC<Props> = ({language }) => {
 
           <div className="flex contactContainer  justify-evenly">
                 <div >
-                <h1 className="titleContact text-fonteVerde mt-36  text-5xl">{language === 'pt' ? pt.Tittle : en.Tittle}</h1>
+                <h1 className="titleContact text-fonteVerde mt-12  text-5xl">{language === 'pt' ? pt.Tittle : en.Tittle}</h1>
                     <div className="flex items-center gap-2 ">
                     <MapPin className="mt-5 mb-4" size={32}  />
                     <h1 className=" location font-bold ">{language === 'pt' ? pt.Location : en.Location}</h1>

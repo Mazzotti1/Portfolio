@@ -20,7 +20,7 @@ export const TypewriterEffect = (props: {language: string }) => {
         <TextHome>
         <div>
 
-            <div className=" HomeMenu mt-40 flex flex-col justify-center items-center  ">
+            <div className=" HomeMenu mt-52 flex flex-col justify-center items-center  ">
             <h1  className=" tittle text-4xl flex  justify-center items-center " >Hello World!💻</h1>
         <div className=" typeWritting flex text-center   text-2xl mt-3 ">
             <Typed

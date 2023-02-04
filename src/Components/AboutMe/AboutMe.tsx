@@ -13,7 +13,7 @@ export const AboutMe: React.FC<Props> = ({language }) => {
     return(
         <ContainerAbout>
         <div id="About" className=" h-full flex justify-center   ">
-           <div className="pl-52 pr-52 containerResume flex justify-center ml-20 items-center  " >
+           <div className="pl-52 pr-52 containerResume flex justify-center items-center  " >
             <img  src={perfil} className=" imgAbout h-1/5 rounded-3xl shadow-md hover:shadow-gray-400  hover:scale-110  transition-all " data-anime="top" />
 
             <div className=" containerText  m-20 w-3/5  flex  flex-col">
