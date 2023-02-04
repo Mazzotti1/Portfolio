@@ -16,9 +16,6 @@
 
 }
 
-@media (max-width:375px){
-}
-
 @media (max-width:390px){
     .titleHome{
         font-size:20px;
@@ -66,7 +63,7 @@
         margin:30px
     }
     .containerMenu{
-        diplay:flex;
+        display:flex;
         flex-direction:row;
         justify-content:center;
         align-items:end;
@@ -111,19 +108,34 @@
     .ButtonPlus{
         margin-left:90px
     }
-
-.footerTittle{
+    .footerTittle{
     font-size:14px;
-
-}
-.containerFooter{
+    }
+    .containerFooter{
     width:350px;
     gap:0;
     flex-direction:column;
     padding-bottom:40px
-}
-.disquete{
+    }
+    .disquete{
     padding:0;
-}
+    }
 
 }
+
+@media (max-width:320px){
+    .HomeMenu{
+        margin-top:20px
+    }
+}
+
+   /*height*/
+
+
+@media (max-height:900px) {
+
+ }
+
+ @media (max-height:580px) {
+
+ }
