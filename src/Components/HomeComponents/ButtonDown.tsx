@@ -17,7 +17,7 @@ export function ButtonDown() {
         <div >
             <button  onClick={handleClick}>
             <TextHome>
-              <CaretDown size={60} className="hover:translate-y-5 hover:text-fonteVerde transition " weight="thin" />
+              <CaretDown size={60} className=" hover:translate-y-5 hover:text-fonteVerde transition " weight="thin" />
              </TextHome>
             </button>
         </div>

@@ -16,7 +16,7 @@ export const AboutMe: React.FC<Props> = ({language }) => {
            <div className="pl-52 pr-52 containerResume flex justify-center items-center  " >
             <img  src={perfil} className=" imgAbout h-1/5 rounded-3xl shadow-md hover:shadow-gray-400  hover:scale-110  transition-all " data-anime="top" />
 
-            <div className=" containerText  m-20 w-3/5  flex  flex-col">
+            <div className=" containerText flex  flex-col">
             <h1 className="text-fonteVerde text-4xl mb-5 ">{language === 'pt' ? pt.TittleAbout : en.TittleAbout}</h1>
             <TextAbout>
             <p className=" ">{language === 'pt' ? pt.ResumeAbout : en.ResumeAbout}</p>

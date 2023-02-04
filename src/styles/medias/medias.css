@@ -21,7 +21,7 @@
         padding:20px;
     }
     .containerResume{
-        margin-right:170px;
+
         padding:0;
         display:flex;
         flex-direction: column-reverse;
@@ -41,10 +41,13 @@
     width:110px
    }
    .containerText{
-    padding:35px;
+
+    }
+    .containerKnowledge{
+        height:100%;
     }
     .tittleKnowledge{
-    margin:0;
+    font-size:35px;
     }
     .footerTittle{
     font-size:10px;
@@ -62,19 +65,11 @@
     .typeWritting{
         font-size:23px
     }
-    .imgAbout{
-        margin-top:20px;
-        margin-left:70px;
-    }
+
     .TittleSecProjects{
         font-size:35px;
     }
-    .containerText{
-        margin:0px;
-        margin-left:70px;
-        margin-top:20px;
-        width:320px
-    }
+
     .buttonsAbout{
         display:flex;
 
@@ -84,10 +79,7 @@
         grid-template-columns: repeat(1, minmax(0, 1fr));
         padding:20px;
     }
-    .tittleKnowledge{
-        font-size:35px;
 
-    }
     .menusKnowledge{
         display:initial;
         margin:30px
@@ -148,9 +140,22 @@
     .disquete{
     padding:0;
     }
+    .containerText{
+        text-align:center;
+        margin-top:10px
+    }
+    .imgAbout{
+        margin-top:10px;
+
+    }
+
+
 }
 
 @media (max-width:320px){
+    .titleHome{
+        font-size:17px
+    }
     .footerTittle{
         font-size:10px;
         }
@@ -159,6 +164,11 @@
         gap:0;
         flex-direction:column;
         display:flex
+        }
+        .containerText{
+            text-align:center;
+            margin:10px;
+            margin-top:70px
         }
 
 }
