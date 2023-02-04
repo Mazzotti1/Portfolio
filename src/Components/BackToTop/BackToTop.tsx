@@ -50,7 +50,7 @@ export function BackToTop (){
       {showButton && (
         <ContainerBackToTop>
         <button className="  w-fit ml-5" style={buttonStyles} onClick={handleClick}>
-         <ArrowSquareUp className=" hover:text-fonteVerde transition-all duration-700 " size={52}  weight="thin" />
+         <ArrowSquareUp className="opacity-10 hover:opacity-100 hover:text-fonteVerde transition-all duration-700 " size={52}  weight="thin" />
         </button>
         </ContainerBackToTop>
       )}

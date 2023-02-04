@@ -9,11 +9,12 @@ interface Props {
 
 export const Footer: React.FC<Props> = ({language }) => {
     return(
-        <ContainerFooter>
-        <div className="  h-max  ">
-          <div className="flex justify-center items-center p-4 gap-10">
-          <h1 className=" ">{language === 'pt' ? pt.Tittle : en.Tittle}</h1>
-            <SocialMedias />
+        <ContainerFooter className="">
+        <div className="  ">
+          <div className="containerFooter flex justify-center items-center  p-4 gap-10">
+          <h1 className="footerTittle ">{language === 'pt' ? pt.Tittle : en.Tittle}</h1>
+
+            <SocialMedias  />
             </div>
         </div>
         </ContainerFooter>

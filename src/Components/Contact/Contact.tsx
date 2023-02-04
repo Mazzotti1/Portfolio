@@ -11,9 +11,9 @@ interface Props {
 export const Contact: React.FC<Props> = ({language }) => {
     return(
       <ContainerContact>
-        <div id="contact" className=" ml-10 h-max  ">
+        <div id="contact" className="contactContainer ml-10 h-max  ">
 
-          <div className="flex  justify-evenly">
+          <div className="flex contactContainer  justify-evenly">
                 <div >
                 <h1 className="titleContact text-fonteVerde mt-36  text-5xl">{language === 'pt' ? pt.Tittle : en.Tittle}</h1>
                     <div className="flex items-center gap-2 ">
@@ -38,10 +38,10 @@ export const Contact: React.FC<Props> = ({language }) => {
 
                     </BorderContact>
 
+
+
                 </div>
-                <div className=" gifPc mt-10 mb-20 ">
-                  <img className="" src={email} alt="" />
-                </div>
+                <img className="gifPc w-96" src={email} alt="" />
           </div>
 
         </div>

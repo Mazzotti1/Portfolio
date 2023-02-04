@@ -23,7 +23,7 @@ export const Knowledges = (props: { language: string }) => {
         <ContainerKnowledge>
         <div className=" h-full  ">
              <div className="justify-center p-20   flex">
-                <h1 className="tittleKnowledge text-center text-fonteVerde  mt-60 text-5xl">{props.language === 'pt' ? pt.Tittle : en.Tittle}</h1>
+                <h1 className="tittleKnowledge text-center text-fonteVerde   text-5xl">{props.language === 'pt' ? pt.Tittle : en.Tittle}</h1>
              </div>
              <SubContainerKnowledge>
         <div className=" menusKnowledge flex justify-center gap-20">

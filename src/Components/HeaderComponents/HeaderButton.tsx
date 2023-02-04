@@ -70,7 +70,7 @@ export const HeaderButton: React.FC<Props> = ({ toggleTheme, changeLanguage, lan
 
     <div className={ `fab mr-96 mt-10 ${isOpenButton ? "open" : ""}`}>
 
-<button  className=" hover:text-black hover:bg-zinc-600"  onClick={() =>  setIsOpenButton(!isOpenButton)}>
+<button  className=" ButtonPlus hover:text-black hover:bg-zinc-600"  onClick={() =>  setIsOpenButton(!isOpenButton)}>
 <HeaderButtonPlus>
   <Plus  size={30}/>
 </HeaderButtonPlus>
@@ -78,7 +78,7 @@ export const HeaderButton: React.FC<Props> = ({ toggleTheme, changeLanguage, lan
 
 <TextHeader>
 
-<div className="menu">
+<div className="menu ButtonPlus">
 
   <button onClick={AboutButton}>
   <User  className="text-black" size={32} weight="thin" />
@@ -149,7 +149,7 @@ export const HeaderButton: React.FC<Props> = ({ toggleTheme, changeLanguage, lan
     </div>
 
       </div>
-      <img className="pt-72" src={logo} />
+      <img className="disquete pt-72" src={logo} />
     </aside>
     </ContainerHeader>
     </>
