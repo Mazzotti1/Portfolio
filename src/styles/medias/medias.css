@@ -2,9 +2,12 @@
     .descriptionInsideProject{
         font-size:14px
     }
+    .disquete{
+    padding:0;
+    }
 }
 
-@media (max-width:768px){
+@media (max-width:851px){
     .aboutButtons{
         font-size:10px;
         align-text:center;
@@ -13,10 +16,20 @@
         width:95%;
 
     }
+    .menusKnowledge{
+        padding:20px;
+    }
+    .containerResume{
+        margin-right:170px;
+        padding:0;
+        display:flex;
+        flex-direction: column-reverse;
+
+    }
 
 }
 
-@media (max-width:414px){
+@media (max-width:425px){
     .titleHome{
         font-size:20px;
     }
@@ -27,15 +40,12 @@
         font-size:23px
     }
     .imgAbout{
-
-        margin-right:50px;
+        margin-top:20px;
+        margin-left:70px;
     }
-    .containerResume{
-        margin-right:170px;
 
-        display:flex;
-        flex-direction:column;
-    }
+
+
     .containerText{
         margin:0px;
         margin-left:70px;
@@ -57,6 +67,7 @@
     }
     .tittleKnowledge{
         font-size:35px;
+
     }
     .menusKnowledge{
         display:initial;
@@ -121,6 +132,7 @@
     padding:0;
     }
 
+
 }
 
 @media (max-width:320px){
@@ -130,21 +142,19 @@
    .disquete{
     width:110px
    }
+   .containerText{
+    padding:40px;
+    }
+    .tittleKnowledge{
+    margin:0;
+    }
+    .footerTittle{
+    font-size:10px;
+    }
+    .containerMenu{
+
+    }
+
 
 }
 
-   /*height*/
-
-
-@media (max-height:900px) {
-    .HomeMenu{
-        margin-top:20px
-    }
-
- }
-
- @media (max-height:580px) {
-    .HomeMenu{
-        margin-top:20px
-    }
- }
