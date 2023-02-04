@@ -104,7 +104,7 @@ export const HeaderButton: React.FC<Props> = ({ toggleTheme, changeLanguage, lan
 </TextHeader>
 </div>
 
-<button onClick={toggleSidebar}><X size={32} className="border text-white hover:text-black hover:bg-white" weight="thin" /></button>
+<button onClick={toggleSidebar}><X size={32} className="closeSideBar border text-white hover:text-black hover:bg-white" weight="thin" /></button>
 
     <Gear size={42} className="text-white mt-20 mb-4" weight="thin" />
     <label className="create-label ">{language === 'pt' ? pt.Configs : en.Configs}</label>
