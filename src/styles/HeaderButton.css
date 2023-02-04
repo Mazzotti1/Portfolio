@@ -1,0 +1,122 @@
+
+
+  .fab {
+    position: relative;
+    border-radius: 50%;
+    box-shadow: 2px 0px 10px white;
+  }
+
+
+  button {
+    background: transparent;
+    border: 0;
+    cursor: pointer;
+    font-family: inherit;
+
+  }
+  button:hover{
+    font-style:underline;
+    filter: drop-shadow(0 0 2em #FFF );
+  }
+
+
+  .fab > button {
+    position: relative;
+    z-index: 1;
+    display: grid;
+    place-items: center;
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    border: 1px solid white;
+    transition: 0.2s;
+
+  }
+
+
+  .fab > button > i {
+    font-size: 32px;
+  }
+
+  .menu {
+    position: absolute;
+    top: 76px;
+    left: 0;
+    display: grid;
+    place-content: center;
+    gap: 12px;
+    width: 64px;
+    scale: 0;
+    translate: 0 80%;
+    transform-origin: 50% 50%;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.375s;
+
+  }
+
+
+
+  .fab.open > button {
+    rotate: 45deg;
+    translate: 0;
+
+  }
+
+
+  .fab.open .menu {
+    scale: 1;
+    translate: 0;
+    opacity: 1;
+    visibility: visible;
+
+  }
+
+  .menu > button {
+    position: relative;
+    display: grid;
+    place-items: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background:white;
+    transition: 0.3s;
+
+  }
+
+  .menu > button:hover {
+    background: rgba(255, 255, 255, 0.16);
+  }
+
+  .menu > button > span {
+    position: absolute;
+    right: 64px;
+    white-space: nowrap;
+    translate: 10px 0;
+    opacity: 0;
+    visibility: hidden;
+    font-size: 16px;
+    transition: 0.5s;
+
+  }
+
+  .menu > button:hover > span {
+    translate: 0;
+    opacity: 1;
+    visibility: visible;
+
+  }
+
+  .sidebar-toggle {
+  position: absolute;
+  top: 20px;
+  right: -30px;
+  display: grid;
+  place-items: center;
+  width: 30px;
+  height: 30px;
+  background: #4e5261;
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+  font-size: 22px;
+}

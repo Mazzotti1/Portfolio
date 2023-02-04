@@ -1,0 +1,238 @@
+
+import { useState} from 'react';
+import { GithubLogo, Eye, Wrench} from 'phosphor-react'
+import "../../styles/Projects.css"
+
+import js from "../../assets/javascript-original.png"
+import html from "../../assets/html5-original.png"
+import css from "../../assets/css3-original.png"
+import mongo from "../../assets/mongodb-original.png"
+import react from "../../assets/react-original.png"
+import redux from "../../assets/redux-original.png"
+import ts from "../../assets/typescript-original.png"
+import node from "../../assets/nodejs-original.png"
+import tailwind from "../../assets/tailwindcss-original.png"
+import socketio from "../../assets/socketio-original.png"
+
+import build from "../../assets/build.svg"
+import card from "../../assets/card-de-produto.gif"
+import tdl from "../../assets/To-do-list.gif"
+import jdv from "../../assets/jogo da velha.gif"
+import login from "../../assets/login.gif"
+import chat from "../../assets/chat.gif"
+import nlw from "../../assets/nlw.gif"
+import Jdm from "../../assets/jogo da memoria.gif"
+
+
+import { CSSTransition, TransitionGroup } from 'react-transition-group';
+import { ContainerProjetos, BorderProjetos } from "./ProjetosStyle"
+
+import {pt, en} from "./LanguageProjects"
+
+
+
+interface Project {
+  title: string;
+  thumb: string;
+  techs: string[];
+  gif_id: string;
+  link: string;
+  git: string;
+  description:string;
+  language:string;
+}
+
+
+
+export function ProjectList(props: Project) {
+
+  const [showProjects, setShowProjects] = useState(3);
+  const allProjects = ([
+    {
+      title: (props.language === 'pt' ? pt.T1 : en.T1),
+      thumb: nlw,
+      techs:[react, node, ts, tailwind],
+      gif_id: "1",
+      link:"https://github.com/Mazzotti1/NLW-setup-Habits",
+      git:"https://github.com/Mazzotti1/NLW-setup-Habits",
+      description: (props.language === 'pt' ? pt.D1 : en.D1),
+    },
+
+    {
+      title: (props.language === 'pt' ? pt.T2 : en.T2),
+      thumb: tdl,
+      techs:[react,js,redux],
+      gif_id: "2",
+      link:"https://to-do-list-redux-cyan.vercel.app/",
+      git:"https://github.com/Mazzotti1/ToDoList-redux",
+      description:(props.language === 'pt' ? pt.D2 : en.D2),
+    },
+    {
+      title: (props.language === 'pt' ? pt.T3 : en.T3),
+      thumb: card,
+      techs:[react,js, css],
+      gif_id: "3",
+      link:"https://productcard-nine.vercel.app/",
+      git:"https://github.com/Mazzotti1/boraCodar-productCard",
+      description:(props.language === 'pt' ? pt.D3 : en.D3),
+    },
+    {
+      title: (props.language === 'pt' ? pt.T4 : en.T4),
+      thumb: chat,
+      techs:[html,css,js,socketio],
+      gif_id: "4",
+      link:"https://github.com/Mazzotti1/Chat",
+      git:"https://github.com/Mazzotti1/Chat",
+      description:(props.language === 'pt' ? pt.D4 : en.D4),
+    },
+    {
+      title: (props.language === 'pt' ? pt.T5 : en.T5),
+      thumb: login,
+      techs:[html,css,js,mongo],
+      gif_id: "5",
+      link:"https://github.com/Mazzotti1/API-REST-Login",
+      git:"https://github.com/Mazzotti1/API-REST-Login",
+      description:(props.language === 'pt' ? pt.D5 : en.D5),
+    },
+    {
+      title: (props.language === 'pt' ? pt.T6 : en.T6),
+      thumb: Jdm,
+      techs:[html,css, js],
+      gif_id: "6",
+      git:"https://github.com/Mazzotti1/Jogo-da-memoria",
+      link:"https://jogo-da-memoria-liard.vercel.app/",
+      description: (props.language === 'pt' ? pt.D6 : en.D6),
+    },
+    {
+      title: (props.language === 'pt' ? pt.T7 : en.T7),
+      thumb: jdv,
+      gif_id: "7",
+      techs:[html, css, js],
+      git:"../../assets/jogo da velha.gif",
+      link:"https://jogo-da-velha-plum-phi.vercel.app/",
+      description:(props.language === 'pt' ? pt.D7 : en.D7),
+    },
+
+    {
+      title: (props.language === 'pt' ? pt.T8 : en.T8),
+      thumb: build,
+      gif_id: "8",
+      techs:[],
+      link:"#home",
+      git:"#home",
+      description:(props.language === 'pt' ? pt.D8 : en.D8),
+    },
+
+  ]);
+
+  const handleShowMore = () => {
+    setShowProjects(allProjects.length);
+  };
+  const handleShowLess = () => {
+    setShowProjects(3);
+    };
+  const ProjectCard: React.FC<Project> = ({ title,thumb, description ,techs, link, git}) => {
+    const [showHoverCard, setShowHoverCard] = useState(false);
+
+
+
+     //Card Unico
+    return (
+      <div className=" relative card  flex flex-col p-5 transition duration-700  items-center   text-white  bg-black border border-red shadow-gray-500 shadow-sm rounded-3xl"
+      onMouseEnter={() => setShowHoverCard(true)}
+      onMouseLeave={() => setShowHoverCard(false)}
+      >
+
+        <img src={thumb} alt={title} />
+        <h3  className="pt-7 text-white text-xl pb-4">{title}</h3>
+        <div className="flex mt-10 justify-center text-white">
+          <h1 className="text-1xl">{props.language === 'pt' ? pt.Techs : en.Techs}</h1>
+        </div>
+        <div className="flex pt-8 pb-8 text-white gap-5">
+        {techs.map((tech) => (
+          <img width={32} key={tech} src={tech} />
+        ))}
+        </div>
+
+
+        {/* Back Card */}
+
+        {showHoverCard && (
+        <div className="absolute opacity-0 hover:opacity-95 transition duration-700 bg-black bottom-0 left-0 right-0 top-0  border border-red shadow-gray-500 shadow-sm rounded-3xl">
+
+          <div className="flex justify-center">
+          <h3  className="pt-4 text-white text-lg ">{title}</h3>
+          </div>
+
+          <div className="flex justify-center text-center p-10">
+          <p className="descriptionInsideProject text-white  "> {description}</p>
+          </div>
+
+
+
+          <div className="flex justify-center mb-4 text-white gap-5">
+        {techs.map((tech) => (
+          <img width={32} key={tech} src={tech} />
+        ))}
+        </div>
+
+          <div className="flex justify-center items-center  gap-20">
+              <a className="  text-white p-2 transition-colors  border rounded-full hover:text-black hover:bg-white hover:border-fonteVerde " target={"_blank"}  href={link}><Eye size={38}></Eye></a>
+              <a className="  text-white p-2 transition-colors  border rounded-full hover:text-black hover:bg-white hover:border-fonteVerde " target={"_blank"} href={git}><GithubLogo size={38} ></GithubLogo></a>
+          </div>
+        </div>
+      )}
+      </div>
+
+    );
+  };
+  //lista de cards
+
+  return (
+<ContainerProjetos>
+      <div className="    ">
+
+      <div className="justify-center flex">
+      <h1 className="TittleSecProjects text-fonteVerde text-center  mt-12 text-5xl">{props.language === 'pt' ? pt.TittleProjects : en.TittleProjects}</h1>
+      </div>
+
+      <TransitionGroup className="cards m-auto w-4/6 mt-12 grid gap-10 grid-cols-3">
+        {allProjects.slice(0, showProjects).map((project) => (
+          <CSSTransition key={project.gif_id} timeout={500} classNames="fade">
+            <ProjectCard language={''} {...project} />
+          </CSSTransition>
+        ))}
+      </TransitionGroup>
+
+
+
+
+
+      <div className="flex justify-center  ">
+    {showProjects < allProjects.length && (
+       <BorderProjetos className="mt-5 mb-5 p-3 rounded-md">
+       <div className="text-center   ">
+       <button className=" rounded-lg transition duration-700 text-fonteVerde  " onClick={handleShowMore}>{props.language === 'pt' ? pt.ShowMore : en.ShowMore}</button>
+       </div>
+       </BorderProjetos>
+      )}
+
+      {showProjects === allProjects.length && (
+        <BorderProjetos className="mt-5 mb-5 p-3 rounded-md">
+      <div className="text-center    ">
+      <button className="transition duration-700 text-fonteVerde  " onClick={handleShowLess}>{props.language === 'pt' ? pt.ShowLess : en.ShowLess}</button>
+      </div>
+      </BorderProjetos>
+      )}
+      </div>
+    </div>
+
+    </ContainerProjetos>
+  );
+};
+
+export default ProjectList;
+
+
+
+

@@ -1,0 +1,94 @@
+@media (max-width:1440px){
+    .descriptionInsideProject{
+        font-size:14px
+    }
+}
+
+@media (max-width:768px){
+    .aboutButtons{
+        font-size:10px;
+        align-text:center;
+    }
+    .cards{
+        width:95%;
+
+    }
+}
+
+@media (max-width:375px){
+}
+
+@media (max-width:390px){
+    .titleHome{
+        font-size:20px;
+    }
+    .tittle{
+        font-size:33px
+    }
+    .typeWritting{
+        font-size:23px
+    }
+    .imgAbout{
+            margin-top:30%;
+            height:150px;
+            padding:0
+    }
+    .containerResume{
+        margin:0;
+        padding:0;
+        text-align:center;
+        display:flex;
+        flex-direction:column;
+    }
+    .containerText{
+        margin:30px;
+    }
+    .buttonsAbout{
+        display:flex;
+        justify-content:center;
+    }
+    .TittleSecProjects{
+        font-size:35px;
+    }
+
+    .cards{
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+        padding:20px;
+    }
+    .tittleKnowledge{
+        font-size:35px;
+    }
+    .menusKnowledge{
+        display:initial;
+        margin:30px
+    }
+    .containerMenu{
+        width:100%;
+
+    }
+    .containerTable{
+        width:100%;
+
+    }
+    .titleContact{
+        font-size:35px
+    }
+    .location{
+        font-size:14px
+    }
+    .email{
+        font-size:14px
+    }
+    .tel{
+        font-size:14px
+    }
+    .buttonZap{
+        width:150px;
+        height:16px
+    }
+    .gifPc{
+        margin-top:100%;
+
+    }
+
+}
