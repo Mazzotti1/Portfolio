@@ -2,7 +2,7 @@ import { useState } from "react";
 import "../../styles/HeaderButton.css";
 import "../../styles/Sidebar.css";
 import { Container } from "../HomeComponents/HomeStyles";
-import {  TextHeader, HeaderButtonPlus, ContainerHeader, SubContainerHeader } from "./HeaderStyles";
+import {  TextHeader, HeaderButtonPlus, ContainerHeader, SubContainerHeader,  } from "./HeaderStyles";
 
 import {Plus, Gear, Envelope, User, X, BookBookmark, Moon, Sun} from 'phosphor-react'
 import logo from "../../assets/disquete.gif";
