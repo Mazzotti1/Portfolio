@@ -16,7 +16,7 @@ const Home = (props: { language: string }) => {
 
     return(
     <Container>
-        <div className="    items-center flex flex-col  h-screen ">
+        <div id="home" className=" items-center flex flex-col  h-screen ">
 
             <Header />
 

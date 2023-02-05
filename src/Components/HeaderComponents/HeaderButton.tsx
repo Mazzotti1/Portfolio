@@ -66,9 +66,9 @@ export const HeaderButton: React.FC<Props> = ({ toggleTheme, changeLanguage, lan
 
     <>
     <ContainerHeader>
-    <aside className={`sidebar  ${isOpenBar ? "open" : ""}`}>
+<aside className={`sidebar a ${isOpenBar ? "open " : ""}`}>
 
-    <div className={ `fab mr-96 mt-10 ${isOpenButton ? "open" : ""}`}>
+    <div className={ `fab mr-96 opacity-25 hover:opacity-100 mt-10 transition-all duration-500 ${isOpenButton ? "open" : ""}`}>
 
 <button  className=" ButtonPlus hover:text-black hover:bg-zinc-600"  onClick={() =>  setIsOpenButton(!isOpenButton)}>
 <HeaderButtonPlus>
@@ -78,9 +78,9 @@ export const HeaderButton: React.FC<Props> = ({ toggleTheme, changeLanguage, lan
 
 <TextHeader>
 
-<div className="menu ButtonPlus">
+<div className="menu ButtonPlus ">
 
-  <button onClick={AboutButton}>
+  <button  onClick={AboutButton}>
   <User  className="text-black" size={32} weight="thin" />
     <span>{language === 'pt' ? pt.AboutButton : en.AboutButton}</span>
   </button>

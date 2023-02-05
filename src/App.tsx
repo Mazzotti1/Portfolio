@@ -22,7 +22,7 @@ import { useState, useEffect } from 'react'
 
 
 function App() {
-  const [theme, setTheme] = usePersistedState<DefaultTheme>('theme', light);
+  const [theme, setTheme] = usePersistedState<DefaultTheme>('theme', dark);
   const [language, setLanguage] = useState('pt');
 
   const toggleTheme = () =>{

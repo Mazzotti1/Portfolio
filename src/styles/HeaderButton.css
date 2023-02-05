@@ -16,7 +16,7 @@
   }
   button:hover{
     font-style:underline;
-    filter: drop-shadow(0 0 2em #FFF );
+    filter: drop-shadow(0 0 1em #FFF );
   }
 
 
@@ -35,7 +35,7 @@
 
 
   .fab > button > i {
-    font-size: 32px;
+    font-size: 12px;
   }
 
   .menu {
@@ -119,4 +119,8 @@
   border-top-right-radius: 3px;
   border-bottom-right-radius: 3px;
   font-size: 22px;
+}
+
+.fade {
+  opacity: 0.5;
 }

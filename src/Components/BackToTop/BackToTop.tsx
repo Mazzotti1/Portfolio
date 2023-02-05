@@ -30,7 +30,7 @@ export function BackToTop (){
 
         const handleClick = () => {
           scroll.scrollTo(0, {
-            duration: 800,
+            duration: 700,
             smooth: "easeInCubic"
           });
         };

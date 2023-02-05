@@ -1,3 +1,11 @@
+@media (max-width:2560px){
+    .sidebar {
+        right:-190px;
+        width: 190px;
+        translate: -190px 0;
+    }
+}
+
 @media (max-width:1440px){
     .descriptionInsideProject{
         font-size:14px
@@ -5,6 +13,7 @@
     .disquete{
     padding:0;
     }
+
 }
 
 
@@ -33,7 +42,7 @@
 
 }
 
-@media (max-width:390px){
+@media (max-width:425px){
     .HomeMenu{
         margin-top:90px
     }
@@ -149,11 +158,18 @@
         margin-top:10px;
 
     }
+    .sidebar {
+        right:-380px;
+        width: 380px;
+        translate: -380px 0;
+    }
 
-
+    .fab{
+        margin-right:570px;
+    }
 }
 
-@media (max-width:320px){
+@media (max-width:360px){
     .titleHome{
         font-size:17px
     }
@@ -171,5 +187,12 @@
             margin:10px;
             margin-top:70px
         }
-
+        .sidebar {
+            right:-310px;
+            width: 310px;
+            translate: -290px 0;
+        }
+        .fab{
+            margin-right:490px;
+        }
 }
