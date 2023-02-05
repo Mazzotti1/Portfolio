@@ -26,7 +26,7 @@ function App() {
   const [language, setLanguage] = useState('pt');
 
   const toggleTheme = () =>{
-    setTheme(theme.title === 'light' ? dark : light);
+    setTheme(theme.title === 'dark' ? light : dark);
   }
 
   const changeLanguage = (newLanguage: string) => {
