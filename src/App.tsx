@@ -17,7 +17,7 @@ import dark from './styles/themes/dark'
 
 import { HeaderButton } from './Components/HeaderComponents/HeaderButton'
 import usePersistedState from './utils/usePersistedState'
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 
 
 

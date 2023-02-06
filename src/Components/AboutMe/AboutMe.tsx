@@ -14,7 +14,7 @@ export const AboutMe: React.FC<Props> = ({language }) => {
         <ContainerAbout>
         <div id="About" className=" h-full flex justify-center   ">
            <div className="pl-52 pr-52 containerResume flex justify-center items-center gap-8 " >
-            <img  src={perfil} className=" imgAbout  h-1/5 rounded-3xl shadow-md hover:shadow-gray-400  hover:scale-110  transition-all " data-anime="top" />
+            <img alt="Foto de perfil" src={perfil} className=" imgAbout  h-1/5 rounded-3xl shadow-md hover:shadow-gray-400  hover:scale-110  transition-all " data-anime="top" />
 
             <div className=" containerText flex  flex-col">
             <h1 className="text-fonteVerde text-4xl mb-5 ">{language === 'pt' ? pt.TittleAbout : en.TittleAbout}</h1>
@@ -25,7 +25,7 @@ export const AboutMe: React.FC<Props> = ({language }) => {
 
                         <div className=" aboutButtons flex gap-9 ">
                         <BorderAbout className="w-fit  text-center flex ">
-                        <a className=" p-2  transition-colors    hover:border-fonteVerde " href="curriculo"  >Download CV</a>
+                        <a className=" p-2  transition-colors    hover:border-fonteVerde " href="https://drive.google.com/file/d/10RI485z3RsBSjKFv2lV1zKGqQQFsyFkr/view?usp=share_link" target={"_blank"} >Download CV</a>
                         </BorderAbout>
                         <BorderAbout className="w-fit text-center flex ">
                         <a className=" p-2  transition-colors    hover:border-fonteVerde " target={"_blank"} href="https://gabrielmazzotti.com.br/"  >{language === 'pt' ? pt.jobs : en.jobs}</a>

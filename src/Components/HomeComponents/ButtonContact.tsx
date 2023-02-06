@@ -20,7 +20,7 @@ export const ButtonContact:React.FC<ButtonProps> = ({ language }) => {
 
         <div >
 
-              <a className="scroll-smooth cursor-pointer"  onClick={handleClick}  >{language === 'pt' ? pt.ButtonContact : en.ButtonContact}</a>
+              <a className="scroll-smooth cursor-pointer" href='#contato' onClick={handleClick}  >{language === 'pt' ? pt.ButtonContact : en.ButtonContact}</a>
 
         </div>
 

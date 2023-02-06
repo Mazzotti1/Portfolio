@@ -143,14 +143,14 @@ export function ProjectList(props: Project) {
       onMouseLeave={() => setShowHoverCard(false)}
       >
 
-        <img src={thumb} alt={title} />
+        <img  src={thumb} alt={title} />
         <h3  className="pt-7 text-white text-xl pb-4">{title}</h3>
         <div className="flex mt-10 justify-center text-white">
           <h1 className="text-1xl">{props.language === 'pt' ? pt.Techs : en.Techs}</h1>
         </div>
         <div className="flex pt-8 pb-8 text-white gap-5">
         {techs.map((tech) => (
-          <img width={32} key={tech} src={tech} />
+          <img alt='Icone das Tecnologias usadas' width={32} key={tech} src={tech} />
         ))}
         </div>
 
@@ -172,7 +172,7 @@ export function ProjectList(props: Project) {
 
           <div className="flex justify-center mb-4 text-white gap-5">
         {techs.map((tech) => (
-          <img width={32} key={tech} src={tech} />
+          <img alt='Icone das Techs usadas' width={32} key={tech} src={tech} />
         ))}
         </div>
 

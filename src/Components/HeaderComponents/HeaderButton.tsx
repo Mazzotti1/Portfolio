@@ -66,9 +66,9 @@ export const HeaderButton: React.FC<Props> = ({ toggleTheme, changeLanguage, lan
 
     <>
     <ContainerHeader>
-<aside className={`sidebar a ${isOpenBar ? "open " : ""}`}>
+<aside className={`sidebar  ${isOpenBar ? "open " : ""}`}>
 
-    <div className={ `fab mr-96 opacity-25 hover:opacity-100 mt-10 transition-all duration-500 ${isOpenButton ? "open" : ""}`}>
+    <div  className={ `botaodoMenu fab mr-96 opacity-25 hover:opacity-100 mt-10 transition-all duration-500 ${isOpenButton ? "open" : ""}`}>
 
 <button  className=" ButtonPlus hover:text-black hover:bg-zinc-600"  onClick={() =>  setIsOpenButton(!isOpenButton)}>
 <HeaderButtonPlus>
@@ -140,16 +140,16 @@ export const HeaderButton: React.FC<Props> = ({ toggleTheme, changeLanguage, lan
       <h1  className="text-white font-500 text-sm" >{language === 'pt' ? pt.LanguageButton : en.LanguageButton}</h1>
       <div className='text-white flex gap-7'>
       <button className='hover:opacity-30' onClick={() => changeLanguage('pt')}>
-      <img className='w-10' src="https://img.icons8.com/color/256/brazil.png"/>
+      <img alt="Bandeira do brasil" className='w-10' src="https://img.icons8.com/color/256/brazil.png"/>
       </button>
 
       <button className='hover:opacity-30' onClick={() => changeLanguage('en')}>
-      <img className='w-10' src="https://img.icons8.com/color/256/usa.png"/>
+      <img alt="Bandeira dos EUA" className='w-10' src="https://img.icons8.com/color/256/usa.png"/>
       </button>
     </div>
 
       </div>
-      <img className="disquete pt-72" src={logo} />
+      <img alt="Gif do Disquete" className="disquete pt-72" src={logo} />
     </aside>
     </ContainerHeader>
     </>

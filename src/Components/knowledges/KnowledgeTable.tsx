@@ -44,7 +44,7 @@ export function KnowledgeTable(props: Techs) {
           <div className="containerTable flex flex-col  justify-center  shadow-lg shadow-black gap-8 items-center w-96 bg-gradient-to-r p-8 ">
             <div className="flex  gap-4 border bg-neutral-900 border-white rounded-full p-3 justify-center">
               {allTech.icons.map((icon) => (
-                <img width={56} src={icon} />
+                <img alt="Icone das tecnologias" width={56} src={icon} />
               ))}
             </div>
             <div><h1 className="w-full text-center text-xl">{allTech.description}</h1></div>

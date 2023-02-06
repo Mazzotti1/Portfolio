@@ -41,7 +41,7 @@ export const Contact: React.FC<Props> = ({language }) => {
 
 
                 </div>
-                <img className="gifPc w-96" src={email} alt="" />
+                <img className="gifPc w-96" src={email} alt="Imagem para contato" />
           </div>
 
         </div>
