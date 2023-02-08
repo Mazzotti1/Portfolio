@@ -1,3 +1,4 @@
+import imgKnow from "../../assets/geometria.png"
 
 import { useState } from "react";
 import "../../styles/KnowledgeTableSlide.css"
@@ -5,7 +6,7 @@ import "../../styles/KnowledgeTableSlide.css"
 import { KnowledgeMenu } from "./KnowledgeMenu"
 import { KnowledgeTable } from "./KnowledgeTable"
 
-import { CSSTransition, TransitionGroup } from 'react-transition-group';
+
 
 import { ContainerKnowledge, SubContainerKnowledge, Text } from "./KnowledgeStyle";
 import {pt, en} from './LanguageKnowledge'
@@ -21,26 +22,24 @@ export const Knowledges = (props: { language: string }) => {
 
     return(
         <ContainerKnowledge>
-        <div className=" containerKnowledge h-screen  ">
+        <div className=" containerKnowledge flex flex-col justify-center h-screen  ">
              <div className="justify-center  flex">
-                <h1 className="tittleKnowledge text-center text-fonteVerde  mt-52  mb-20 text-5xl">{props.language === 'pt' ? pt.Tittle : en.Tittle}</h1>
+                <h1 className="tittleKnowledge text-center  text-fonteVerde  text-5xl">{props.language === 'pt' ? pt.Tittle : en.Tittle}</h1>
              </div>
-             <SubContainerKnowledge>
-        <div className=" menusKnowledge flex justify-center gap-20">
+             <img className="absolute opacity-20 right-0 -rotate-180" width={800} src={imgKnow} alt="Circulo com formas" />
+
+        <div className=" menusKnowledge flex justify-center flex-col ">
        <KnowledgeMenu  handleClick={handleClick} name={""} id={id}  setId={setId} language={props.language}/>
-       <TransitionGroup>
-        <CSSTransition
-            key={id}
-            timeout={500}
-            classNames="fade"
+       <div>
+        <div
         >
             <Text>
        <KnowledgeTable icons={[]} description={""} id={id} language={props.language} />
        </Text>
-       </CSSTransition>
-       </TransitionGroup>
+       </div>
+       </div>
         </div>
-        </SubContainerKnowledge>
+
 
         </div>
         </ContainerKnowledge>

@@ -6,8 +6,7 @@ import { TextHome } from "./HomeStyles";
 export function ButtonDown() {
   const handleClick = () => {
     scroll.scrollTo(948, {
-      duration: 500,
-      smooth: "easeInOutQuint"
+
     });
   };
 

@@ -70,15 +70,15 @@ export const HeaderButton: React.FC<Props> = ({ toggleTheme, changeLanguage, lan
 
     <div  className={ `botaodoMenu fab mr-96 opacity-25 hover:opacity-100 mt-10 transition-all duration-500 ${isOpenButton ? "open" : ""}`}>
 
-<button  className=" ButtonPlus hover:text-black hover:bg-zinc-600"  onClick={() =>  setIsOpenButton(!isOpenButton)}>
+<button  className=" ButtonPlus  hover:text-black hover:bg-zinc-600"  onClick={() =>  setIsOpenButton(!isOpenButton)}>
 <HeaderButtonPlus>
-  <Plus  size={30}/>
+  <Plus alt="Botão da navegação" size={30}/>
 </HeaderButtonPlus>
 </button>
 
 <TextHeader>
 
-<div className="menu ButtonPlus ">
+<div className="menu absolute ButtonPlus ">
 
   <button  onClick={AboutButton}>
   <User  className="text-black" size={32} weight="thin" />
