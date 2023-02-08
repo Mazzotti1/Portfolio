@@ -7,14 +7,14 @@ import {  TextHeader, HeaderButtonPlus, ContainerHeader, SubContainerHeader,  } 
 import {Plus, Gear, Envelope, User, X, BookBookmark, Moon, Sun} from 'phosphor-react'
 import logo from "../../assets/disquete.gif";
 
-import {  animateScroll as scroll  } from 'react-scroll'
+
 import { ThemeContext } from 'styled-components';
 import { shade } from 'polished';
 import Switch from 'react-switch'
 import {useContext} from 'react'
 import {pt, en} from './LanguagesHeader'
 
-
+import {  animateScroll as scroll  } from 'react-scroll';
 
 
 interface Props {
@@ -37,24 +37,26 @@ export const HeaderButton: React.FC<Props> = ({ toggleTheme, changeLanguage, lan
 
   const AboutButton = () => {
     scroll.scrollTo(948, {
-      duration: 500,
-      smooth: "easeInOutQuint"
+      duration: 700,
+
     });
-  };
+
+  }
 
   const ProjectButton = () => {
     scroll.scrollTo(948 * 2, {
-      duration: 800,
-      smooth: "easeInOutQuint"
-    });
-  };
-  const ContactButton = () => {
-    scroll.scrollTo(940 * 4, {
-      duration: 800,
-      smooth: "easeInOutQuint"
-    });
-  };
+      duration: 700,
 
+    });
+
+  }
+  const ContactButton = () => {
+    scroll.scrollTo(948 * 4, {
+      duration: 700,
+
+    });
+
+  }
 
 
 
