@@ -5,9 +5,8 @@ ter uma base em tecnologias web, porém eu quis refazer por 3 motivos, design de
 para projetos completos e simplesmente para seguir meu caminho de domínio dessas techs front-end.
 
 ## Visualização
-<a href="https://gabrielmazzotti.vercel.app/">Pode aproveitar para dar uma olhada de como ficou o projeto aqui! 💻</a>
+<a href="https://portifolio.gabrielmazzotti.com.br/">Pode aproveitar para dar uma olhada de como ficou o projeto aqui! 💻</a>
 
-Pronto, agora é possivel acessar a aplicação a partir da rota: https://localhost:3000/register ou https://localhost:3000/login
 
 
 ## Tecnologias utilizadas:
