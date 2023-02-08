@@ -7,7 +7,7 @@ import {  TextHeader, HeaderButtonPlus, ContainerHeader, SubContainerHeader,  } 
 import {Plus, Gear, Envelope, User, X, BookBookmark, Moon, Sun} from 'phosphor-react'
 import logo from "../../assets/disquete.gif";
 
-import {  animateScroll as scroll  } from 'react-scroll'
+
 import { ThemeContext } from 'styled-components';
 import { shade } from 'polished';
 import Switch from 'react-switch'
@@ -36,25 +36,18 @@ export const HeaderButton: React.FC<Props> = ({ toggleTheme, changeLanguage, lan
   }
 
   const AboutButton = () => {
-    scroll.scrollTo(948, {
-      duration: 500,
-      smooth: "easeInOutQuint"
-    });
-  };
+    window.scrollTo(948, 948)
+
+  }
 
   const ProjectButton = () => {
-    scroll.scrollTo(948 * 2, {
-      duration: 800,
-      smooth: "easeInOutQuint"
-    });
-  };
-  const ContactButton = () => {
-    scroll.scrollTo(940 * 4, {
-      duration: 800,
-      smooth: "easeInOutQuint"
-    });
-  };
+    window.scrollTo(948 * 2  , 948 * 2)
 
+  }
+  const ContactButton = () => {
+    window.scrollTo(948 *4 , 948*4)
+
+  }
 
 
 
@@ -70,15 +63,15 @@ export const HeaderButton: React.FC<Props> = ({ toggleTheme, changeLanguage, lan
 
     <div  className={ `botaodoMenu fab mr-96 opacity-25 hover:opacity-100 mt-10 transition-all duration-500 ${isOpenButton ? "open" : ""}`}>
 
-<button  className=" ButtonPlus hover:text-black hover:bg-zinc-600"  onClick={() =>  setIsOpenButton(!isOpenButton)}>
+<button  className=" ButtonPlus  hover:text-black hover:bg-zinc-600"  onClick={() =>  setIsOpenButton(!isOpenButton)}>
 <HeaderButtonPlus>
-  <Plus  size={30}/>
+  <Plus alt="Botão da navegação" size={30}/>
 </HeaderButtonPlus>
 </button>
 
 <TextHeader>
 
-<div className="menu ButtonPlus ">
+<div className="menu absolute ButtonPlus ">
 
   <button  onClick={AboutButton}>
   <User  className="text-black" size={32} weight="thin" />

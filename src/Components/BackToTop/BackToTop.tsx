@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import { ArrowSquareUp } from "phosphor-react";
-import {  animateScroll as scroll  } from 'react-scroll'
 import { ContainerBackToTop } from "./BackToTopStyle";
 
 interface ButtonStyles {
@@ -29,10 +28,8 @@ export function BackToTop (){
         }, []);
 
         const handleClick = () => {
-          scroll.scrollTo(0, {
-            duration: 700,
-            smooth: "easeInCubic"
-          });
+          window.scrollTo(0, 0 );
+
         };
 
         const buttonStyles: ButtonStyles = {

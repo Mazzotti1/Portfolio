@@ -31,10 +31,9 @@
     }
     .containerResume{
 
-        padding:0;
         display:flex;
         flex-direction: column-reverse;
-
+        gap:0;
     }
     .descriptionInsideProject{
         font-size:12px
@@ -49,9 +48,7 @@
    .disquete{
     width:110px
    }
-   .containerText{
 
-    }
     .containerKnowledge{
         height:100%;
     }
@@ -152,11 +149,13 @@
     .containerText{
         text-align:center;
         margin:30px;
-        margin-top:10px
+        margin-top:10px;
+        width:100%;
+        padding:10px
     }
     .imgAbout{
-        margin-top:10px;
 
+        height:20%
     }
     .sidebar {
         right:-380px;
@@ -167,6 +166,7 @@
     .fab{
         margin-right:570px;
     }
+
 }
 
 @media (max-width:360px){
@@ -185,7 +185,8 @@
         .containerText{
             text-align:center;
             margin:10px;
-            margin-top:70px
+            margin-top:70px;
+            padding:0
         }
         .sidebar {
             right:-310px;

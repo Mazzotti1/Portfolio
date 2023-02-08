@@ -33,12 +33,12 @@ export function KnowledgeMenu({ name, setId, language }: KnowledgeMenuProps) {
 
 
     return(
-        <div className=" containerMenu  p-16 mt-10  shadow-black shadow-lg flex flex-col justify-center items-center  gap-6 rounded-2xl w-96 h-96 ">
+        <div className=" containerMenu  p-16 mt-10  shadow-black shadow-lg flex  justify-center items-center  gap-6 rounded-2xl  h-36">
                 <Text>
-                <h1 className="categoryTittle text-center text-xl">{language === 'pt' ? pt.Category : en.Category}</h1>
+
                 </Text>
               {allTypes.map((tech) => (
-          <button onClick={() => setId(tech.id)}  className=" text-black    justify-center  border border-fonteVerde p-6 bg-white item w-20 rounded-md  hover:text-white hover:bg-black  duration-700 transition-all">{tech.name}</button>
+          <button onClick={() => setId(tech.id)}  className=" text-black    justify-center  border border-fonteVerde p-3  bg-white item rounded-md  hover:text-white hover:bg-black  duration-700 transition-all">{tech.name}</button>
 
         ))}
 

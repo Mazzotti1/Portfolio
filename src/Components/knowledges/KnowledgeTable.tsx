@@ -37,17 +37,17 @@ export function KnowledgeTable(props: Techs) {
     ]
 
     return(
-        <div className="  flex justify-center item">
+        <div className="  flex justify-center  item">
             <div className="flex justify-center mb-10 mt-10   ">
             {allTechs.filter(allTech => allTech.id === id)
         .map((allTech) => (
-          <div className="containerTable flex flex-col  justify-center  shadow-lg shadow-black gap-8 items-center w-96 bg-gradient-to-r p-8 ">
-            <div className="flex  gap-4 border bg-neutral-900 border-white rounded-full p-3 justify-center">
+          <div className="containerTable flex flex-col   justify-center  shadow-lg shadow-black gap-8 items-center w-2/5 bg-gradient-to-r p-8 ">
+            <div className="flex  gap-4 border  bg-neutral-900 border-zinc-800 rounded-md p-3 justify-center">
               {allTech.icons.map((icon) => (
-                <img alt="Icone das tecnologias" width={56} src={icon} />
+                <img alt="Icone das tecnologias " width={36} src={icon} />
               ))}
             </div>
-            <div><h1 className="w-full text-center text-xl">{allTech.description}</h1></div>
+            <div><h1 className="w-full text-center  text-xl">{allTech.description}</h1></div>
           </div>
 
         ))}

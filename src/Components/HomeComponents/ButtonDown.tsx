@@ -1,14 +1,12 @@
 import {CaretDown} from "phosphor-react"
-import {  animateScroll as scroll  } from 'react-scroll'
 import { TextHome } from "./HomeStyles";
 
 
 export function ButtonDown() {
   const handleClick = () => {
-    scroll.scrollTo(948, {
-      duration: 500,
-      smooth: "easeInOutQuint"
-    });
+    window.scrollTo(948, 948)
+
+    ;
   };
 
 

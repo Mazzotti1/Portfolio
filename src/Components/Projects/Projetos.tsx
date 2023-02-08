@@ -24,7 +24,7 @@ import nlw from "../../assets/nlw.gif"
 import Jdm from "../../assets/jogo da memoria.gif"
 
 
-import { CSSTransition, TransitionGroup } from 'react-transition-group';
+
 import { ContainerProjetos, BorderProjetos } from "./ProjetosStyle"
 
 import {pt, en} from "./LanguageProjects"
@@ -138,7 +138,7 @@ export function ProjectList(props: Project) {
 
      //Card Unico
     return (
-      <div className=" relative card  flex flex-col p-5 transition duration-700  items-center   text-white  bg-black border border-red shadow-gray-500 shadow-sm rounded-3xl"
+      <div className=" relative card h-full flex flex-col p-5 transition duration-700  items-center   text-white  bg-black border border-red shadow-gray-500 shadow-sm rounded-md"
       onMouseEnter={() => setShowHoverCard(true)}
       onMouseLeave={() => setShowHoverCard(false)}
       >
@@ -158,7 +158,7 @@ export function ProjectList(props: Project) {
         {/* Back Card */}
 
         {showHoverCard && (
-        <div className="absolute opacity-0 hover:opacity-95 transition duration-700 bg-black bottom-0 left-0 right-0 top-0  border border-red shadow-gray-500 shadow-sm rounded-3xl">
+        <div className="absolute opacity-0 hover:opacity-95 transition duration-700 bg-black bottom-0 left-0 right-0 top-0  border border-red shadow-gray-500 shadow-sm rounded-md">
 
           <div className="flex justify-center">
           <h3  className="pt-4 text-white text-lg ">{title}</h3>
@@ -196,13 +196,13 @@ export function ProjectList(props: Project) {
       <h1 className="TittleSecProjects text-fonteVerde text-center  mt-12 text-5xl">{props.language === 'pt' ? pt.TittleProjects : en.TittleProjects}</h1>
       </div>
 
-      <TransitionGroup className="cards m-auto w-4/6 mt-12 grid gap-10 grid-cols-3">
+      <div className="cards m-auto w-4/6  mt-12 grid gap-10 grid-cols-3">
         {allProjects.slice(0, showProjects).map((project) => (
-          <CSSTransition key={project.gif_id} timeout={500} classNames="fade">
+         <div key={project.gif_id}>
             <ProjectCard language={''} {...project} />
-          </CSSTransition>
+          </div>
         ))}
-      </TransitionGroup>
+     </div>
 
 
 
