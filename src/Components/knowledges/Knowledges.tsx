@@ -26,7 +26,7 @@ export const Knowledges = (props: { language: string }) => {
              <div className="justify-center  flex">
                 <h1 className="tittleKnowledge text-center  text-fonteVerde  text-5xl">{props.language === 'pt' ? pt.Tittle : en.Tittle}</h1>
              </div>
-             <img className="absolute opacity-20 right-0 -rotate-180" width={800} src={imgKnow} alt="Circulo com formas" />
+             <img className="imgKnow absolute opacity-20 right-0 -rotate-180" width={800} src={imgKnow} alt="Circulo com formas" />
 
         <div className=" menusKnowledge flex justify-center flex-col ">
        <KnowledgeMenu  handleClick={handleClick} name={""} id={id}  setId={setId} language={props.language}/>

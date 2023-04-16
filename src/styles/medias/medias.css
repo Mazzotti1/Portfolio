@@ -13,11 +13,15 @@
     .disquete{
     padding:0;
     }
+    .imgKnow{
+    width:500px
+    }
 
 }
 
 
 @media (max-width:820px){
+
     .aboutButtons{
         font-size:10px;
         align-text:center;
