@@ -1,5 +1,5 @@
 
-
+import {  animateScroll as scroll  } from 'react-scroll';
 import {pt ,en} from "./LanguageHome"
 
 interface ButtonProps{
@@ -8,8 +8,10 @@ interface ButtonProps{
 
 export const ButtonContact:React.FC<ButtonProps> = ({ language }) => {
   const handleClick = () => {
-    window.scrollTo(948 *4 , 948*4)
+    scroll.scrollTo(948 * 4, {
+      duration: 700,
 
+    });
   }
 
 

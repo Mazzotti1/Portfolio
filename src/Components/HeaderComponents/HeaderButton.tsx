@@ -14,7 +14,7 @@ import Switch from 'react-switch'
 import {useContext} from 'react'
 import {pt, en} from './LanguagesHeader'
 
-
+import {  animateScroll as scroll  } from 'react-scroll';
 
 
 interface Props {
@@ -36,16 +36,25 @@ export const HeaderButton: React.FC<Props> = ({ toggleTheme, changeLanguage, lan
   }
 
   const AboutButton = () => {
-    window.scrollTo(948, 948)
+    scroll.scrollTo(948, {
+      duration: 700,
+
+    });
 
   }
 
   const ProjectButton = () => {
-    window.scrollTo(948 * 2  , 948 * 2)
+    scroll.scrollTo(948 * 2, {
+      duration: 700,
+
+    });
 
   }
   const ContactButton = () => {
-    window.scrollTo(948 *4 , 948*4)
+    scroll.scrollTo(948 * 4, {
+      duration: 700,
+
+    });
 
   }
 
