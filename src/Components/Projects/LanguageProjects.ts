@@ -27,6 +27,18 @@ export const pt = {
 
     T8:"Em breve!",
     D8:"Projeto em construção! buscando sempre evoluir minhas habilidades para o futuro",
+
+    T9:"Sharp Cut BarberShop",
+    D9:"Aplicativo mobile de agendamentos de barbearia e controle de leads, composto por uma api própria e banco de dados em produção.",
+
+    T10:"MuscleMate",
+    D10:"Rede social de treinamento físico, com controle de estatísticas pessoais e compartilhamento para amigos, disponível na Playstore",
+
+    T11:"Gameaily",
+    D11:"Jogo diário e competitivo de advinhação de jogos do mainstream pela capa, com disputa por pontuações de rank disponível na Playstore",
+    
+    T12:"Hatlas",
+    D12:"Aplicativo de mapa de calor que localiza lugares, exibe informações e fornece estimativas e estatísticas em tempo real sobre a quantidade de pessoas presentes.",
 }
 
   //en.ts
@@ -60,4 +72,15 @@ export const pt = {
     T8: "Coming Soon!",
     D8: "Project under construction! Always striving to improve my skills for the future.",
 
+    T9:"Sharp Cut BarberShop",
+    D9:"Mobile scheduling and lead management application for barbershops, consisting of its own API and production database.",
+
+    T10:"MuscleMate",
+    D10:"Fitness Training Social Network, featuring personal statistics tracking and sharing with friends, available on the Play Store.",
+
+    T11: "Gameaily",
+    D11: "Daily and competitive guessing game of mainstream game covers, with ranking score competition available on Playstore.",
+
+    T12:"Hatlas",
+    D12:"Heatmap app that locates places, displays information, and provides real-time estimates and statistics on the number of people present.",
   }

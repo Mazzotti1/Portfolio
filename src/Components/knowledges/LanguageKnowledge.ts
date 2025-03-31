@@ -2,9 +2,9 @@ export const pt = {
     Tittle: 'Meus conhecimentos!',
     Category: 'Escolha um tipo',
 
-    FrontDesc: 'Essas são as minhas principais tecnologias que eu tenho conhecimento para produzir os meus frontends, atualmente as que eu mais uso é o Typescript, React, Redux e Tailwind.',
-    BackDesc: 'Para o backend eu uso principalmente Node.Js com Express ou dependendo do projeto posso utilizar o Fastify, para os bancos de dados tenho projetos e práticas com MYSql, MongoDb e o Firestore, Já fiz projetos com o socketIo também, e para conexão das Api eu uso o Axios.',
-    MobileDesc:'No momento para as minhas práticas eu uso React Native, o Mobile é um tipo de tecnologia que eu tenho muito interesse de aprender, tanto masterizar meu conhecimento nas Techs hibridas, mas também aprender mais sobre o desenvolvimento nativo de Android.',
+    FullstackDesc: 'Atualmente, as principais tecnologias que utilizo para desenvolver meus apps e ferramentas são Typescript/Javascript, PHP, Java e Kotlin. Para bancos de dados, tenho maior experiência com MySQL e PostgreSQL, e para infraestrutura, costumo usar minhas VPS e containers dockerizados, configurando-as conforme a necessidade do projeto.',
+    securityDesc: 'Realizo testes de penetração e identifico vulnerabilidades em aplicativos móveis, utilizando ferramentas especializadas como Jadx para descompilação de APKs, Frida para realização de bypass de segurança e manipulação de runtime, e Burp Suite para análise de tráfego de rede e mapeamento de rotas vulneráveis. Além disso, emprego técnicas avançadas de análise estática e dinâmica, como a exploração de falhas em comunicação insegura, bypass de autenticação e execução de testes de fuzzing para detectar falhas em parâmetros de entrada.',
+    MobileDesc:'Desenvolvo aplicativos móveis, tanto híbridos quanto nativos, utilizando principalmente ferramentas como Flutter, React Native, Java e Kotlin, com experiência em desenvolvimento para Android. Tenho também conhecimentos básicos em Swift para o desenvolvimento de aplicativos iOS.',
   }
 
   //en.ts
@@ -12,7 +12,7 @@ export const pt = {
     Tittle: 'My knowledges!',
     Category: 'Choose a type!',
 
-    FrontDesc: 'These are my main technologies that I have knowledge to produce my frontends, currently the ones I use the most are Typescript, React, Redux and Tailwind.',
-    BackDesc: 'To produce my backends, currently I use mainly Node.Js with Express or depending on the project I can use Fastify, for the databases I have projects and practices with MYSql, MongoDb and Firestore, I have also made projects with socketIo, and for API connection I use Axios.',
-    MobileDesc:'At the moment for my practices I use React Native, mobile is a type of technology that I am very interested in learning, both to master my knowledge in hybrid Techs, but also to learn more about native Android development.',
+    FullstackDesc: 'Currently, the main technologies I use to develop my apps and tools are Typescript/Javascript, PHP, Java, and Kotlin. For databases, I have the most experience with MySQL and PostgreSQL, and for infrastructure, I typically use my VPS with docker containers, configuring them according to the projects needs.',
+    securityDesc: 'I perform penetration testing and identify vulnerabilities in mobile applications, using specialized tools such as Jadx for APK decompilation, Frida for security bypass and runtime manipulation, and Burp Suite for traffic analysis and mapping of vulnerable routes. Additionally, I employ advanced static and dynamic analysis techniques, such as exploiting insecure communication flaws, bypassing authentication, and conducting fuzzing tests to detect issues in input parameters.',
+    MobileDesc:'I develop mobile applications, both hybrid and native, using primarily tools like Flutter, React Native, Java, and Kotlin, with experience in Android development. I also have basic knowledge of Swift for iOS app development.',
   }

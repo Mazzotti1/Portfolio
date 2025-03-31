@@ -13,18 +13,25 @@ import ts from "../../assets/typescript-original.png"
 import node from "../../assets/nodejs-original.png"
 import tailwind from "../../assets/tailwindcss-original.png"
 import socketio from "../../assets/socketio-original.png"
+import java from "../../assets/java.png"
+import flutter from "../../assets/flutter.png"
+import docker from "../../assets/docker.png"
+import postgres from "../../assets/postgres.png"
+import firebase from "../../assets/firebase.png"
+import kotlin from "../../assets/kotlin.png"
 
 import build from "../../assets/build.svg"
-import card from "../../assets/card-de-produto.gif"
-import tdl from "../../assets/To-do-list.gif"
+import card from "../../assets/card produto.png"
+import tdl from "../../assets/to do list.png"
 import jdv from "../../assets/jogo da velha.gif"
-import login from "../../assets/login.gif"
-import chat from "../../assets/chat.gif"
+import login from "../../assets/login.png"
+import chat from "../../assets/chat.png"
 import nlw from "../../assets/nlw.gif"
-import Jdm from "../../assets/jogo da memoria.gif"
-
-
-
+import Jdm from "../../assets/jogo da memoria.png"
+import Bc from "../../assets/barbercutgif.gif"
+import Mm from "../../assets/musclemate.gif"
+import gameaily from "../../assets/gameaily.gif"
+import hatlas from "../../assets/hatlas.gif"
 import { ContainerProjetos, BorderProjetos } from "./ProjetosStyle"
 
 import {pt, en} from "./LanguageProjects"
@@ -49,10 +56,46 @@ export function ProjectList(props: Project) {
   const [showProjects, setShowProjects] = useState(3);
   const allProjects = ([
     {
+      title: (props.language === 'pt' ? pt.T12 : en.T12),
+      thumb: hatlas,
+      techs:[kotlin, postgres, firebase, docker],
+      gif_id: "1",
+      link:"https://github.com/Mazzotti1/Localiza-ai",
+      git:"https://github.com/Mazzotti1/Localiza-ai",
+      description: (props.language === 'pt' ? pt.D12 : en.D12),
+    },
+    {
+      title: (props.language === 'pt' ? pt.T11 : en.T11),
+      thumb: gameaily,
+      techs:[java, kotlin, postgres, firebase, docker],
+      gif_id: "2",
+      link:"https://play.google.com/store/apps/details?id=com.whatsthegame",
+      git:"https://github.com/Mazzotti1/Gameaily",
+      description: (props.language === 'pt' ? pt.D11 : en.D11),
+    },
+    {
+      title: (props.language === 'pt' ? pt.T10 : en.T10),
+      thumb: Mm,
+      techs:[java, flutter, postgres, firebase, docker],
+      gif_id: "3",
+      link:"https://play.google.com/store/apps/details?id=com.musclemate",
+      git:"https://github.com/Mazzotti1/Musclemate",
+      description: (props.language === 'pt' ? pt.D10 : en.D10),
+    },
+    {
+      title: (props.language === 'pt' ? pt.T9 : en.T9),
+      thumb: Bc,
+      techs:[react, node, ts, tailwind, mongo],
+      gif_id: "4",
+      link:"https://expo.dev/accounts/mazzotti/projects/mobile2/builds/ab8e8c1e-b549-42dc-a7e1-33fc463587e4",
+      git:"https://github.com/Mazzotti1/BarberCutApp",
+      description: (props.language === 'pt' ? pt.D9 : en.D9),
+    },
+    {
       title: (props.language === 'pt' ? pt.T1 : en.T1),
       thumb: nlw,
       techs:[react, node, ts, tailwind],
-      gif_id: "1",
+      gif_id: "5",
       link:"https://github.com/Mazzotti1/NLW-setup-Habits",
       git:"https://github.com/Mazzotti1/NLW-setup-Habits",
       description: (props.language === 'pt' ? pt.D1 : en.D1),
@@ -62,7 +105,7 @@ export function ProjectList(props: Project) {
       title: (props.language === 'pt' ? pt.T2 : en.T2),
       thumb: tdl,
       techs:[react,js,redux],
-      gif_id: "2",
+      gif_id: "6",
       link:"https://to-do-list-redux-cyan.vercel.app/",
       git:"https://github.com/Mazzotti1/ToDoList-redux",
       description:(props.language === 'pt' ? pt.D2 : en.D2),
@@ -71,7 +114,7 @@ export function ProjectList(props: Project) {
       title: (props.language === 'pt' ? pt.T3 : en.T3),
       thumb: card,
       techs:[react,js, css],
-      gif_id: "3",
+      gif_id: "7",
       link:"https://productcard-nine.vercel.app/",
       git:"https://github.com/Mazzotti1/boraCodar-productCard",
       description:(props.language === 'pt' ? pt.D3 : en.D3),
@@ -80,7 +123,7 @@ export function ProjectList(props: Project) {
       title: (props.language === 'pt' ? pt.T4 : en.T4),
       thumb: chat,
       techs:[html,css,js,socketio],
-      gif_id: "4",
+      gif_id: "8",
       link:"https://github.com/Mazzotti1/Chat",
       git:"https://github.com/Mazzotti1/Chat",
       description:(props.language === 'pt' ? pt.D4 : en.D4),
@@ -89,7 +132,7 @@ export function ProjectList(props: Project) {
       title: (props.language === 'pt' ? pt.T5 : en.T5),
       thumb: login,
       techs:[html,css,js,mongo],
-      gif_id: "5",
+      gif_id: "9",
       link:"https://github.com/Mazzotti1/API-REST-Login",
       git:"https://github.com/Mazzotti1/API-REST-Login",
       description:(props.language === 'pt' ? pt.D5 : en.D5),
@@ -98,7 +141,7 @@ export function ProjectList(props: Project) {
       title: (props.language === 'pt' ? pt.T6 : en.T6),
       thumb: Jdm,
       techs:[html,css, js],
-      gif_id: "6",
+      gif_id: "10",
       git:"https://github.com/Mazzotti1/Jogo-da-memoria",
       link:"https://jogo-da-memoria-liard.vercel.app/",
       description: (props.language === 'pt' ? pt.D6 : en.D6),
@@ -106,7 +149,7 @@ export function ProjectList(props: Project) {
     {
       title: (props.language === 'pt' ? pt.T7 : en.T7),
       thumb: jdv,
-      gif_id: "7",
+      gif_id: "11",
       techs:[html, css, js],
       git:"../../assets/jogo da velha.gif",
       link:"https://jogo-da-velha-plum-phi.vercel.app/",
@@ -116,7 +159,7 @@ export function ProjectList(props: Project) {
     {
       title: (props.language === 'pt' ? pt.T8 : en.T8),
       thumb: build,
-      gif_id: "8",
+      gif_id: "12",
       techs:[],
       link:"#home",
       git:"#home",
@@ -210,15 +253,15 @@ export function ProjectList(props: Project) {
 
       <div className="flex justify-center  ">
     {showProjects < allProjects.length && (
-       <BorderProjetos className="mt-5 mb-5 p-3 rounded-md">
-       <div className="text-center   ">
+       <BorderProjetos className="mt-5 mb-5 p-3 rounded-md  z-10">
+       <div className="text-center  z-10  ">
        <button className=" rounded-lg transition duration-700 text-fonteVerde  " onClick={handleShowMore}>{props.language === 'pt' ? pt.ShowMore : en.ShowMore}</button>
        </div>
        </BorderProjetos>
       )}
 
       {showProjects === allProjects.length && (
-        <BorderProjetos className="mt-5 mb-5 p-3 rounded-md">
+        <BorderProjetos className="mt-5 mb-5 p-3 rounded-md  z-10">
       <div className="text-center    ">
       <button className="transition duration-700 text-fonteVerde  " onClick={handleShowLess}>{props.language === 'pt' ? pt.ShowLess : en.ShowLess}</button>
       </div>

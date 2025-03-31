@@ -21,12 +21,12 @@ export function KnowledgeTable(props: Techs) {
     const allTechs = [
         {
             icons:[ts,react,tw,redux],
-            description:(props.language === 'pt' ? pt.FrontDesc : en.FrontDesc),
+            description:(props.language === 'pt' ? pt.FullstackDesc : en.FullstackDesc),
             id:1,
         },
         {
             icons:[node,mongo,socketio],
-            description:(props.language === 'pt' ? pt.BackDesc : en.BackDesc),
+            description:(props.language === 'pt' ? pt.securityDesc : en.securityDesc),
             id:2,
         },
         {

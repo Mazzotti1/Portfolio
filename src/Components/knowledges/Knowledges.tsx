@@ -22,13 +22,18 @@ export const Knowledges = (props: { language: string }) => {
 
     return(
         <ContainerKnowledge>
-        <div className=" containerKnowledge flex flex-col justify-center h-screen  ">
+        <div className=" containerKnowledge flex flex-col justify-center h-screen min-h-[1000px] ">
              <div className="justify-center  flex">
                 <h1 className="tittleKnowledge text-center  text-fonteVerde  text-5xl">{props.language === 'pt' ? pt.Tittle : en.Tittle}</h1>
              </div>
-             <img className="absolute opacity-20 right-0 -rotate-180" width={800} src={imgKnow} alt="Circulo com formas" />
+             <img 
+                className="absolute opacity-20 right-0 -rotate-180 z-0" 
+                width={800} 
+                src={imgKnow} 
+                alt="Circulo com formas" 
+            />
 
-        <div className=" menusKnowledge flex justify-center flex-col ">
+        <div className=" menusKnowledge flex justify-center flex-col  z-10">
        <KnowledgeMenu  handleClick={handleClick} name={""} id={id}  setId={setId} language={props.language}/>
        <div>
         <div

@@ -26,10 +26,7 @@ export const AboutMe: React.FC<Props> = ({language }) => {
 
                         <div className=" aboutButtons flex gap-9 ">
                         <BorderAbout className="w-fit  text-center flex ">
-                        <a className=" p-2  transition-colors    hover:border-fonteVerde " href="https://drive.google.com/file/d/10RI485z3RsBSjKFv2lV1zKGqQQFsyFkr/view?usp=share_link" target={"_blank"} >Download CV</a>
-                        </BorderAbout>
-                        <BorderAbout className="w-fit text-center flex ">
-                        <a className=" p-2  transition-colors    hover:border-fonteVerde " target={"_blank"} href="https://gabrielmazzotti.com.br/"  >{language === 'pt' ? pt.jobs : en.jobs}</a>
+                        <a className=" p-2  transition-colors    hover:border-fonteVerde " href="https://drive.google.com/file/d/1O2t7dARKJJG1pO58XF2dQT5of_rPu1S_/view?usp=sharing" target={"_blank"} >{language === 'pt' ? pt.DownloadCv : en.DownloadCv}</a>
                         </BorderAbout>
                         <BorderAbout className="w-fit text-center flex ">
                         <a className=" p-2  transition-colors    hover:border-fonteVerde " target={"_blank"} href="https://api.whatsapp.com/send?phone=5551994447857&text=Ol%C3%A1,%20Gabriel!"  >{language === 'pt' ? pt.ButtonContact : en.ButtonContact}</a>
