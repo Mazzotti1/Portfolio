@@ -60,7 +60,7 @@ export function ProjectList(props: Project) {
       thumb: hatlas,
       techs:[kotlin, postgres, firebase, docker],
       gif_id: "1",
-      link:"https://github.com/Mazzotti1/Localiza-ai",
+      link:"https://play.google.com/store/apps/details?id=com.hatlas",
       git:"https://github.com/Mazzotti1/Localiza-ai",
       description: (props.language === 'pt' ? pt.D12 : en.D12),
     },
