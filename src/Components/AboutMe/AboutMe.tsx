@@ -15,7 +15,7 @@ export const AboutMe: React.FC<Props> = ({language }) => {
         <div id="About" className=" h-full flex    ">
            <div className="  containerResume flex justify-center  items-center gap-28 " >
             <img className="absolute right-3/4 opacity-40 translate-y-96 "  src={imgStyle} alt="Imagem circulo" />
-            <img alt="Foto de perfil" src={perfil} className=" imgAbout   h-2/5 rounded-3xl shadow-md hover:shadow-gray-400  hover:scale-110  transition-all " data-anime="top" />
+            <img alt="Foto de perfil" src={perfil} className=" imgAbout   h-2/3 rounded-3xl shadow-md hover:shadow-gray-400  hover:scale-110  transition-all " data-anime="top" />
 
             <div className=" containerText flex w-2/6 flex-col">
             <h1 className="text-fonteVerde text-4xl mb-5 ">{language === 'pt' ? pt.TittleAbout : en.TittleAbout}</h1>
@@ -25,9 +25,6 @@ export const AboutMe: React.FC<Props> = ({language }) => {
                   <div className="buttonsAbout mt-8">
 
                         <div className=" aboutButtons flex gap-9 ">
-                        <BorderAbout className="w-fit  text-center flex ">
-                        <a className=" p-2  transition-colors    hover:border-fonteVerde " href="https://drive.google.com/file/d/1O2t7dARKJJG1pO58XF2dQT5of_rPu1S_/view?usp=sharing" target={"_blank"} >{language === 'pt' ? pt.DownloadCv : en.DownloadCv}</a>
-                        </BorderAbout>
                         <BorderAbout className="w-fit text-center flex ">
                         <a className=" p-2  transition-colors    hover:border-fonteVerde " target={"_blank"} href="https://api.whatsapp.com/send?phone=5551994447857&text=Ol%C3%A1,%20Gabriel!"  >{language === 'pt' ? pt.ButtonContact : en.ButtonContact}</a>
                         </BorderAbout>
