@@ -22,6 +22,9 @@ export const TypewriterEffect = (props: {language: string }) => {
 
             <div className=" HomeMenu mt-52 flex flex-col justify-center items-center  ">
             <h1  className=" tittle text-4xl flex  justify-center items-center " >Hello World!💻</h1>
+            <h1 className="tittle text-2xl flex justify-center items-center text-gray-400/10 m-10">
+                {"FLAG{V3I0_L0NG3_N3?}"}
+            </h1>
         <div className=" typeWritting flex text-center   text-2xl mt-3 ">
             <Typed
             key={key}

@@ -39,6 +39,9 @@ export const pt = {
     
     T12:"Hatlas",
     D12:"Aplicativo de mapa de calor que localiza lugares, exibe informações e fornece estimativas e estatísticas em tempo real sobre a quantidade de pessoas presentes.",
+
+    T13:"Guess The Flag",
+    D13:"Jogo de adivinhação de bandeiras, onde o usuário deve identificar a bandeira de um país a partir de uma imagem.",
 }
 
   //en.ts
@@ -83,4 +86,7 @@ export const pt = {
 
     T12:"Hatlas",
     D12:"Heatmap app that locates places, displays information, and provides real-time estimates and statistics on the number of people present.",
+
+    T13:"Guess The Flag",
+    D13:"Guessing game of flags, where the user must identify the flag of a country from an image.",
   }

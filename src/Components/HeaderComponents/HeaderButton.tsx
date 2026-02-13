@@ -29,7 +29,12 @@ export const HeaderButton: React.FC<Props> = ({ toggleTheme, changeLanguage, lan
 
   const [isOpenButton, setIsOpenButton] = useState<boolean>(false);
   const [isOpenBar, setIsOpenBar] = useState<boolean>(true);
-  const { colors, title } = useContext(ThemeContext);
+  const theme = useContext(ThemeContext);
+
+  if (!theme) throw new Error("ThemeContext is not available");
+
+  const { colors, title } = theme;
+
   const toggleSidebar = () =>{
     setIsOpenBar(!isOpenBar);
 
