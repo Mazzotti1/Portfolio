@@ -1,13 +1,12 @@
 
-import ts from "../../assets/typescript-original.png"
-import node from "../../assets/nodejs-original.png"
+import kotlin from "../../assets/kotlin.png"
+import java from "../../assets/java.png"
+import docker from "../../assets/docker.png"
+import postgres from "../../assets/postgres.png"
+import flutter from "../../assets/flutter.png"
 import react from "../../assets/react-original.png"
-import tw from "../../assets/tailwindcss-original.png"
-import redux from "../../assets/redux-original.png"
-import mongo from "../../assets/mongodb-original.png"
-import socketio from "../../assets/socketio-original.png"
 
-import {pt, en} from './LanguageKnowledge'
+import {pt, en, Segment} from './LanguageKnowledge'
 interface Techs{
     icons: string[];
     description:string;
@@ -17,21 +16,22 @@ interface Techs{
 
 export function KnowledgeTable(props: Techs) {
     const { icons,description, id, language} = props;
+    const t = language === 'pt' ? pt : en;
 
     const allTechs = [
         {
-            icons:[ts,react,tw,redux],
-            description:(props.language === 'pt' ? pt.FullstackDesc : en.FullstackDesc),
+            icons:[kotlin,java,docker,postgres],
+            segments: t.BackendDesc,
             id:1,
         },
         {
-            icons:[node,mongo,socketio],
-            description:(props.language === 'pt' ? pt.securityDesc : en.securityDesc),
+            icons:[java,kotlin],
+            segments: t.securityDesc,
             id:2,
         },
         {
-            icons:[react],
-            description:(props.language === 'pt' ? pt.MobileDesc : en.MobileDesc),
+            icons:[flutter,react,kotlin,java],
+            segments: t.MobileDesc,
             id:3,
         },
     ]
@@ -47,7 +47,13 @@ export function KnowledgeTable(props: Techs) {
                 <img alt="Icone das tecnologias " width={36} src={icon} />
               ))}
             </div>
-            <div><h1 className="w-full text-center  text-xl">{allTech.description}</h1></div>
+            <div><h1 className="w-full text-center  text-xl">
+              {allTech.segments.map((seg, i) =>
+                seg.highlight
+                  ? <span key={i} className="text-fonteVerde font-semibold">{seg.text}</span>
+                  : <span key={i}>{seg.text}</span>
+              )}
+            </h1></div>
           </div>
 
         ))}

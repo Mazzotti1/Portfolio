@@ -6,10 +6,12 @@ import './styles/medias/medias.css'
 import  ProjectList from './Components/Projects/Projetos'
 import Home  from './Components/HomeComponents/Home'
 import { AboutMe } from './Components/AboutMe/AboutMe'
+
 import { Knowledges } from './Components/knowledges/Knowledges'
 import { Contact } from './Components/Contact/Contact'
 import { Footer } from './Components/Footer/Footer'
 import { BackToTop } from './Components/BackToTop/BackToTop'
+import { NotFound } from './Components/NotFound/NotFound'
 
 import { DefaultTheme, ThemeProvider } from 'styled-components'
 import light from './styles/themes/light'
@@ -18,6 +20,7 @@ import dark from './styles/themes/dark'
 import { HeaderButton } from './Components/HeaderComponents/HeaderButton'
 import usePersistedState from './utils/usePersistedState'
 import { useState } from 'react'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
 
 
 
@@ -33,20 +36,26 @@ function App() {
     setLanguage(newLanguage);
   };
 
-
   return(
     <ThemeProvider theme={theme}>
-    <div  >
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={
+            <div>
+              <Home  language={language}  />
+              <HeaderButton toggleTheme={toggleTheme} changeLanguage={changeLanguage} language={language}/>
+              <AboutMe language={language} />
 
-        <Home  language={language}  />
-        <HeaderButton toggleTheme={toggleTheme} changeLanguage={changeLanguage} language={language}/>
-        <AboutMe language={language} />
-        <ProjectList language={language} title={''} thumb={''} techs={[]} gif_id={''} link={''} git={''} description={''} />
-        <Knowledges language={language} />
-        <Contact language={language} />
-        <Footer language={language}  />
-        <BackToTop  />
-   </div>
+              <ProjectList language={language} title={''} thumb={''} techs={[]} gif_id={''} link={''} git={''} description={''} />
+              <Knowledges language={language} />
+              <Contact language={language} />
+              <Footer language={language}  />
+              <BackToTop  />
+            </div>
+          } />
+          <Route path="*" element={<NotFound />} />
+        </Routes>
+      </BrowserRouter>
    </ThemeProvider>
   )
 }

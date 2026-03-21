@@ -1,7 +1,6 @@
 import styled from 'styled-components';
 
 export const ContainerAbout = styled.div`
-
 background: ${props => props.theme.colors.gradient};
 transition: background 0.7s ease-in-out;
 opacity: 1;
@@ -16,17 +15,13 @@ export const BorderAbout = styled.div`
   &:hover {
     background: ${props => props.theme.colors.secundary};
    color:${props => props.theme.colors.primary};
-
   }
 `
-export const TextAbout = styled.div`
+
+export const TextAbout = styled.p`
 color:${props => props.theme.colors.text};
 transition: color 0.5s ease-in-out;
-opacity: 1;
-
-&:hover {
-  color: ${props => props.theme.colors.secundary};
-
-}
+opacity: 0.85;
+font-size: 1.15rem;
+line-height: 2;
 `
-

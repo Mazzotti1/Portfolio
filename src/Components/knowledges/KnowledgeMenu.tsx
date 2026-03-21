@@ -12,7 +12,7 @@ interface KnowledgeMenuProps {
 
 const allTypes = [
         {
-            name: "Fullstack",
+            name: "Backend ",
             id: 1,
         },
         {

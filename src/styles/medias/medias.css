@@ -4,6 +4,10 @@
         width: 190px;
         translate: -190px 0;
     }
+    .aboutPadding{
+        padding-left:120px;
+        padding-right:120px;
+    }
 }
 
 @media (max-width:1440px){
@@ -15,6 +19,10 @@
     }
     .imgKnow{
     width:500px
+    }
+    .imgAbout{
+        height:auto;
+        max-width:220px;
     }
 
 }
@@ -34,13 +42,33 @@
         padding:20px;
     }
     .containerResume{
-
         display:flex;
         flex-direction: column-reverse;
         gap:0;
     }
+    .imgAbout{
+        height:auto;
+        max-width:180px;
+    }
+    .aboutPadding{
+        padding-left:20px;
+        padding-right:20px;
+    }
     .descriptionInsideProject{
         font-size:12px
+    }
+    .experienceLayout{
+        flex-direction:column;
+        gap:20px;
+    }
+    .experienceTabs{
+        flex-direction:row !important;
+        min-width:auto !important;
+        overflow-x:auto;
+        gap:0;
+    }
+    .experienceWrapper{
+        width:90%;
     }
 
 }
@@ -93,7 +121,6 @@
     .menusKnowledge{
         display:initial;
         margin:30px;
-        z-index: 10000;
     }
     .containerMenu{
         display:flex;
@@ -159,8 +186,12 @@
         padding:10px
     }
     .imgAbout{
-
-        height:20%
+        height:auto;
+        max-width:130px;
+    }
+    .aboutPadding{
+        padding-left:16px;
+        padding-right:16px;
     }
     .sidebar {
         right:-380px;

@@ -22,7 +22,7 @@ export const Knowledges = (props: { language: string }) => {
 
     return(
         <ContainerKnowledge>
-        <div className=" containerKnowledge flex flex-col justify-center h-screen min-h-[1000px] ">
+        <div className=" containerKnowledge relative flex flex-col justify-center h-screen min-h-[1000px] overflow-hidden">
              <div className="justify-center  flex">
                 <h1 className="tittleKnowledge text-center  text-fonteVerde  text-5xl">{props.language === 'pt' ? pt.Tittle : en.Tittle}</h1>
              </div>
@@ -33,7 +33,7 @@ export const Knowledges = (props: { language: string }) => {
                 alt="Circulo com formas" 
             />
 
-        <div className=" menusKnowledge flex justify-center flex-col  z-10">
+        <div className=" menusKnowledge relative flex justify-center flex-col z-10">
        <KnowledgeMenu  handleClick={handleClick} name={""} id={id}  setId={setId} language={props.language}/>
        <div>
         <div

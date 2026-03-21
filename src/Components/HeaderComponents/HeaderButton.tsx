@@ -156,7 +156,7 @@ export const HeaderButton: React.FC<Props> = ({ toggleTheme, changeLanguage, lan
     </div>
 
       </div>
-      <img alt="Gif do Disquete" className="disquete pt-72" src={logo} />
+      <img alt="Gif do Disquete" className="disquete mt-auto" src={logo} />
     </aside>
     </ContainerHeader>
     </>

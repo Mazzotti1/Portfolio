@@ -1,5 +1,5 @@
 export const pt = {
-    TypeWrittingBefore: 'Oi! Meu nome é Gabriel, sou Desenvolvedor Web.',
+    TypeWrittingBefore: 'Oi! Meu nome é Gabriel, sou Desenvolvedor Fullstack.',
     TypeWrittingAfter: 'Aproveite pra ver meus projetos!',
 
     ButtonContact: 'Fale comigo!',
@@ -7,7 +7,7 @@ export const pt = {
 
   //en.ts
   export const en = {
-    TypeWrittingBefore: 'Hi! My name is Gabriel, I am a Web Developer.',
+    TypeWrittingBefore: 'Hi! My name is Gabriel, I am a Fullstack Developer.',
     TypeWrittingAfter: 'Take a look at my projects!',
 
     ButtonContact: 'Talk to me!',
