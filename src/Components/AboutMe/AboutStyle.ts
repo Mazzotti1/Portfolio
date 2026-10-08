@@ -22,6 +22,11 @@ export const TextAbout = styled.p`
 color:${props => props.theme.colors.text};
 transition: color 0.5s ease-in-out;
 opacity: 0.85;
-font-size: 1.15rem;
+font-size: clamp(0.95rem, 3.4vw, 1.15rem);
 line-height: 2;
+
+@media (max-width: 820px) {
+  line-height: 1.75;
+  text-align: left;
+}
 `

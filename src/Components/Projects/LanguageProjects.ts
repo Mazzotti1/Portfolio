@@ -42,6 +42,9 @@ export const pt = {
 
     T13:"Guess The Flag",
     D13:"Jogo de adivinhação de bandeiras, onde o usuário deve identificar a bandeira de um país a partir de uma imagem.",
+
+    T14:"App Sapiens",
+    D14:"Plataforma de gamificação para o evento Sapiens, da Universidade La Salle. Participantes acumulam pontos em rankings individuais e por curso, resgatam raspadinhas por código, registram presença nas atividades e exploram o campus em um mapa 3D interativo.",
 }
 
   //en.ts
@@ -89,4 +92,7 @@ export const pt = {
 
     T13:"Guess The Flag",
     D13:"Guessing game of flags, where the user must identify the flag of a country from an image.",
+
+    T14:"App Sapiens",
+    D14:"Gamification platform for the Sapiens event at Universidade La Salle. Attendees earn points across individual and course-level leaderboards, redeem code-based scratch cards, check in at activities and explore the campus through an interactive 3D map.",
   }

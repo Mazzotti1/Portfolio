@@ -20,6 +20,9 @@ import postgres from "../../assets/postgres.png"
 import firebase from "../../assets/firebase.png"
 import kotlin from "../../assets/kotlin.png"
 import nestjs from "../../assets/nestjs.png"
+import nextjs from "../../assets/nextjs.png"
+import nginx from "../../assets/nginx.png"
+import redis from "../../assets/redis.png"
 
 import build from "../../assets/build.svg"
 import card from "../../assets/card produto.png"
@@ -35,12 +38,15 @@ import gameaily from "../../assets/gameaily.gif"
 import hatlas from "../../assets/hatlas.gif"
 import { ContainerProjetos, BorderProjetos } from "./ProjetosStyle"
 import guesstheflag from "../../assets/guestheflag.gif"
+import sapiensVideo from "../../assets/sapiens.mp4"
 
 import {pt, en} from "./LanguageProjects"
 
 interface Project {
   title: string;
   thumb: string;
+  /** Mp4 opcional. Quando presente, o card renderiza <video> no lugar do <img>. */
+  video?: string;
   techs: string[];
   gif_id: string;
   link: string;
@@ -54,6 +60,17 @@ export function ProjectList(props: Project) {
 
   const [showProjects, setShowProjects] = useState(3);
   const allProjects = ([
+    {
+      // repositorio privado: `git` fica vazio e o botao do GitHub nao renderiza
+      title: (props.language === 'pt' ? pt.T14 : en.T14),
+      thumb: "",
+      video: sapiensVideo,
+      techs: [nextjs, react, node, nginx, postgres, redis, docker, firebase],
+      gif_id: "0",
+      link: "http://appsapiens.unilasalle.edu.br/",
+      git: "",
+      description: (props.language === 'pt' ? pt.D14 : en.D14),
+    },
     {
       title: (props.language === 'pt' ? pt.T13 : en.T13),
       thumb: guesstheflag,
@@ -183,24 +200,46 @@ export function ProjectList(props: Project) {
   const handleShowLess = () => {
     setShowProjects(3);
     };
-  const ProjectCard: React.FC<Project> = ({ title,thumb, description ,techs, link, git, use}) => {
+  const ProjectCard: React.FC<Project> = ({ title,thumb, video, description ,techs, link, git, use}) => {
     const [showHoverCard, setShowHoverCard] = useState(false);
+    // em telas de toque nao existe mouseenter nem :hover, logo o verso do
+    // card (descricao + links) era inalcancavel no celular. Toque alterna.
+    const [tapped, setTapped] = useState(false);
 
-
+    // onClick (e nao pointerdown) para nao disparar durante o scroll
+    const handleCardClick = () => {
+      const isTouch = window.matchMedia('(hover: none)').matches;
+      if (!isTouch) return;
+      setTapped(current => !current);
+    };
 
      //Card Unico
     return (
       <div className=" relative card h-full flex flex-col p-5 transition duration-700  items-center   text-white  bg-black border border-red shadow-gray-500 shadow-sm rounded-md"
       onMouseEnter={() => setShowHoverCard(true)}
       onMouseLeave={() => setShowHoverCard(false)}
+      onClick={handleCardClick}
       >
 
-        <img  src={thumb} alt={title} />
+        {video ? (
+          <video
+            className="projectThumb"
+            src={video}
+            autoPlay
+            muted
+            loop
+            playsInline
+            preload="metadata"
+            aria-label={title}
+          />
+        ) : (
+          <img className="projectThumb" src={thumb} alt={title} loading="lazy" />
+        )}
         <h3  className="pt-7 text-white text-xl pb-4">{title}</h3>
         <div className="flex mt-10 justify-center text-white">
           <h1 className="text-1xl">{props.language === 'pt' ? pt.Techs : en.Techs}</h1>
         </div>
-        <div className="flex pt-8 pb-8 text-white gap-5">
+        <div className="projectTechs flex flex-wrap justify-center pt-8 pb-8 text-white gap-5">
         {techs.map((tech) => (
           <img alt='Icone das Tecnologias usadas' width={32} key={tech} src={tech} />
         ))}
@@ -209,31 +248,35 @@ export function ProjectList(props: Project) {
 
         {/* Back Card */}
 
-        {showHoverCard && (
-        <div className="absolute opacity-0 hover:opacity-95 transition duration-700 bg-black bottom-0 left-0 right-0 top-0  border border-red shadow-gray-500 shadow-sm rounded-md">
+        {(showHoverCard || tapped) && (
+        <div className={`projectOverlay absolute ${tapped ? 'opacity-95' : 'opacity-0 hover:opacity-95'} transition duration-700 bg-black bottom-0 left-0 right-0 top-0  border border-red shadow-gray-500 shadow-sm rounded-md`}>
 
           <div className="flex justify-center">
           <h3  className="pt-4 text-white text-lg ">{title}</h3>
           </div>
 
-          <div className="flex justify-center text-center p-10">
+          <div className="projectDescWrap flex justify-center text-center p-10">
           <p className="descriptionInsideProject text-white  "> {description}</p>
           </div>
 
 
 
-          <div className="flex justify-center mb-4 text-white gap-5">
+          <div className="projectTechs flex flex-wrap justify-center mb-4 text-white gap-5">
         {techs.map((tech) => (
           <img alt='Icone das Techs usadas' width={32} key={tech} src={tech} />
         ))}
         </div>
 
-          <div className="flex justify-center items-center  gap-20">
+          <div className="projectActions flex justify-center items-center  gap-20" onClick={event => event.stopPropagation()}>
               {use && (
                 <a className="  text-white p-2 transition-colors  border rounded-full hover:text-black hover:bg-white hover:border-fonteVerde " target={"_blank"}  href={use}><Play size={38}></Play></a>
               )}
-              <a className="  text-white p-2 transition-colors  border rounded-full hover:text-black hover:bg-white hover:border-fonteVerde " target={"_blank"} href={link}><Eye size={38}></Eye></a>
-              <a className="  text-white p-2 transition-colors  border rounded-full hover:text-black hover:bg-white hover:border-fonteVerde " target={"_blank"} href={git}><GithubLogo size={38} ></GithubLogo></a>
+              {link && (
+                <a className="  text-white p-2 transition-colors  border rounded-full hover:text-black hover:bg-white hover:border-fonteVerde " target={"_blank"} href={link}><Eye size={38}></Eye></a>
+              )}
+              {git && (
+                <a className="  text-white p-2 transition-colors  border rounded-full hover:text-black hover:bg-white hover:border-fonteVerde " target={"_blank"} href={git}><GithubLogo size={38} ></GithubLogo></a>
+              )}
           </div>
         </div>
       )}
@@ -245,7 +288,7 @@ export function ProjectList(props: Project) {
 
   return (
 <ContainerProjetos>
-      <div className="    ">
+      <div id="projects" className="    ">
 
       <div className="justify-center flex">
       <h1 className="TittleSecProjects text-fonteVerde text-center  mt-12 text-5xl">{props.language === 'pt' ? pt.TittleProjects : en.TittleProjects}</h1>

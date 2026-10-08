@@ -3,6 +3,7 @@ export const pt = {
     Configs: 'Configurações',
     AboutButton: 'Sobre mim',
     ProjectButton: 'Projetos',
+    ReadingButton: 'Leituras',
     ContactButton: 'Contato',
     ConfigButton: 'Configurações',
 
@@ -15,6 +16,7 @@ export const pt = {
     Configs: 'Settings',
     AboutButton: 'About me',
     ProjectButton: 'Projects',
+    ReadingButton: 'Reading',
     ContactButton: 'Contact',
     ConfigButton: 'Settings',
 

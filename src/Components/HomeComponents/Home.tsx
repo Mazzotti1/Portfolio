@@ -12,7 +12,7 @@ const Home = (props: { language: string }) => {
 
     return(
     <Container>
-        <div id="home" className="items-center flex flex-col h-screen overflow-hidden">
+        <div id="home" className="homeSection items-center flex flex-col h-screen overflow-hidden">
 
             <Header />
 

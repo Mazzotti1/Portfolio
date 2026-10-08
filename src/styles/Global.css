@@ -1,20 +1,48 @@
-
+html {
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+  overflow-x: hidden;
+}
 
 body {
-    font-family: "JetBrains MONO";
+  font-family: "JetBrains Mono", "JetBrains MONO", ui-monospace, SFMono-Regular, Menlo,
+    Consolas, monospace;
+  overflow-x: hidden;
+}
 
-  }
+/* nenhuma imagem/svg pode estourar o container */
+img,
+svg,
+video,
+canvas {
+  max-width: 100%;
+}
+
+/* e-mails, urls e telefones nao podem furar a tela */
+a[href^="mailto"],
+a[href^="tel"] {
+  overflow-wrap: anywhere;
+}
+
+::-webkit-scrollbar {
+  width: 11px;
+  height: 11px;
+}
+::-webkit-scrollbar-track {
+  background: #000000;
+}
+::-webkit-scrollbar-thumb {
+  background: rgb(187, 186, 186);
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* barra fina em telas de toque */
+@media (max-width: 820px) {
   ::-webkit-scrollbar {
-        width: 11px;
-        height: 2-px;
-      }
-      ::-webkit-scrollbar-track {
-        background: #000000;
-      }
-      ::-webkit-scrollbar-thumb {
-        background: rgb(187, 186, 186);
-        border-radius: 10px;
-      }
-      ::-webkit-scrollbar-thumb:hover {
-        background: #555;
-      }
+    width: 4px;
+    height: 4px;
+  }
+}

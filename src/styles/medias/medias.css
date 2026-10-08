@@ -1,235 +1,512 @@
-@media (max-width:2560px){
-    .sidebar {
-        right:-190px;
-        width: 190px;
-        translate: -190px 0;
-    }
-    .aboutPadding{
-        padding-left:120px;
-        padding-right:120px;
-    }
+/* ============================================================
+   RESPONSIVIDADE
+   Breakpoints em ordem DECRESCENTE: 1440 / 1280 / 1024 / 820 / 640 / 400
+   A ordem importa. Como sao todos max-width, varios casam ao mesmo
+   tempo e quem vence e o ultimo do arquivo. Regra nova entra no bloco
+   do seu breakpoint, NUNCA no fim do arquivo.
+
+   Tipografia fluida: todo clamp() tem o MAXIMO igual ao valor atual
+   de desktop, por isso o layout em telas grandes nao muda.
+   ============================================================ */
+
+/* ---------- BASE ---------- */
+.aboutPadding {
+  padding-left: 120px;
+  padding-right: 120px;
 }
 
-@media (max-width:1440px){
-    .descriptionInsideProject{
-        font-size:14px
-    }
-    .disquete{
-    padding:0;
-    }
-    .imgKnow{
-    width:500px
-    }
-    .imgAbout{
-        height:auto;
-        max-width:220px;
-    }
-
+.experienceTabs {
+  min-width: 220px;
 }
 
-
-@media (max-width:820px){
-
-    .aboutButtons{
-        font-size:10px;
-        align-text:center;
-    }
-    .cards{
-        width:95%;
-
-    }
-    .menusKnowledge{
-        padding:20px;
-    }
-    .containerResume{
-        display:flex;
-        flex-direction: column-reverse;
-        gap:0;
-    }
-    .imgAbout{
-        height:auto;
-        max-width:180px;
-    }
-    .aboutPadding{
-        padding-left:20px;
-        padding-right:20px;
-    }
-    .descriptionInsideProject{
-        font-size:12px
-    }
-    .experienceLayout{
-        flex-direction:column;
-        gap:20px;
-    }
-    .experienceTabs{
-        flex-direction:row !important;
-        min-width:auto !important;
-        overflow-x:auto;
-        gap:0;
-    }
-    .experienceWrapper{
-        width:90%;
-    }
-
+/* Miniatura de projeto (img ou video).
+   NAO usar width:100%: varios gifs sao pequenos no original
+   (hatlas/guesstheflag/barbercut = 100px de largura) e esticar destroi
+   a qualidade. max-height existe pro video do Sapiens, que e retrato
+   384x832 -- sem o cap ele deixaria o card muito mais alto que os
+   outros. Nenhuma miniatura existente passa de 300px nessa largura. */
+.projectThumb {
+  width: auto;
+  max-width: 100%;
+  max-height: 300px;
+  height: auto;
+  object-fit: contain;
 }
 
-@media (max-width:425px){
-    .HomeMenu{
-        margin-top:90px
-    }
-   .disquete{
-    width:110px
-   }
-
-    .containerKnowledge{
-        height:100%;
-    }
-    .tittleKnowledge{
-    font-size:35px;
-    }
-    .footerTittle{
-    font-size:10px;
-    }
-
-    .ButtonPlus{
-        margin-left:90px
-    }
-    .titleHome{
-        font-size:20px;
-    }
-    .tittle{
-        font-size:33px
-    }
-    .typeWritting{
-        font-size:23px
-    }
-
-    .TittleSecProjects{
-        font-size:35px;
-    }
-
-    .buttonsAbout{
-        display:flex;
-
-
-    }
-    .cards{
-        grid-template-columns: repeat(1, minmax(0, 1fr));
-        padding:20px;
-    }
-
-    .menusKnowledge{
-        display:initial;
-        margin:30px;
-    }
-    .containerMenu{
-        display:flex;
-        flex-direction:row;
-        justify-content:center;
-        align-items:flex-end;
-        padding:0;
-        gap:8px;
-        width:100%;
-        height:50px
-
-    }
-    .categoryTittle{
-        display:none
-    }
-    .containerTable{
-        width:100%;
-
-    }
-    .titleContact{
-        font-size:35px
-    }
-    .location{
-        font-size:14px
-    }
-    .email{
-        font-size:14px
-    }
-    .tel{
-        font-size:14px
-    }
-    .buttonZap{
-        width:150px;
-        height:16px
-    }
-    .gifPc{
-        width:80%;
-        height:100%;
-
-    }
-    .contactContainer{
-        display:flex;
-        flex-direction:column;
-    }
-
-    .footerTittle{
-    font-size:14px;
-    }
-    .containerFooter{
-
-    gap:0;
-    flex-direction:column;
-    padding-bottom:40px
-    }
-    .disquete{
-    padding:0;
-    }
-    .containerText{
-        text-align:center;
-        margin:30px;
-        margin-top:10px;
-        width:100%;
-        padding:10px
-    }
-    .imgAbout{
-        height:auto;
-        max-width:130px;
-    }
-    .aboutPadding{
-        padding-left:16px;
-        padding-right:16px;
-    }
-    .sidebar {
-        right:-380px;
-        width: 380px;
-        translate: -380px 0;
-    }
-
-    .fab{
-        margin-right:570px;
-    }
-
+/* botao "mostrar mais" da descricao de conhecimentos: so existe no mobile */
+.showMoreRow {
+  display: none;
 }
 
-@media (max-width:360px){
-    .titleHome{
-        font-size:17px
-    }
-    .footerTittle{
-        font-size:10px;
-        }
-    .containerFooter{
-        width:300px;
-        gap:0;
-        flex-direction:column;
-        display:flex
-        }
-        .containerText{
-            text-align:center;
-            margin:10px;
-            margin-top:70px;
-            padding:0
-        }
-        .sidebar {
-            right:-310px;
-            width: 310px;
-            translate: -290px 0;
-        }
-        .fab{
-            margin-right:490px;
-        }
+/* ---------- tipografia fluida ---------- */
+.titleHome {
+  font-size: clamp(1.3rem, 5.2vw, 1.875rem);
+  line-height: 1.2;
+}
+.tittle {
+  font-size: clamp(1.6rem, 6.4vw, 2.25rem);
+  line-height: 1.2;
+}
+.typeWritting {
+  font-size: clamp(1rem, 4.4vw, 1.5rem);
+  line-height: 1.4;
+}
+.aboutTittle,
+.experienceTittle {
+  font-size: clamp(1.7rem, 6vw, 2.25rem);
+  line-height: 1.2;
+}
+.TittleSecProjects,
+.tittleKnowledge,
+.titleContact,
+.readingTittle {
+  font-size: clamp(2rem, 7.5vw, 3rem);
+  line-height: 1.1;
+}
+.footerTittle {
+  font-size: clamp(0.72rem, 2.6vw, 1rem);
+}
+.knowledgeDesc {
+  font-size: clamp(0.9rem, 2.6vw, 1.25rem);
+  line-height: 1.75;
+}
+.location,
+.email,
+.tel {
+  font-size: clamp(0.82rem, 3.2vw, 1rem);
+}
+
+/* ============================================================
+   1440
+   ============================================================ */
+@media (max-width: 1440px) {
+  .descriptionInsideProject {
+    font-size: 14px;
+  }
+  .disquete {
+    padding: 0;
+  }
+  .imgKnow {
+    width: 500px;
+  }
+  .imgAbout {
+    height: auto;
+    max-width: 220px;
+  }
+  /* Arquitetura e Infra tem texto longo: 40% virava coluna
+     estreita e alta demais pra ler */
+  .containerTable {
+    width: 52%;
+  }
+}
+
+/* ============================================================
+   1280
+   ============================================================ */
+@media (max-width: 1280px) {
+  .cards {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    width: 82%;
+  }
+  .aboutPadding {
+    padding-left: 72px;
+    padding-right: 72px;
+  }
+  .containerResume {
+    gap: 64px;
+  }
+}
+
+/* ============================================================
+   1024
+   ============================================================ */
+@media (max-width: 1024px) {
+  .cards {
+    width: 90%;
+  }
+  .containerTable {
+    width: 70%;
+  }
+  .experienceWrapper {
+    width: 90%;
+  }
+  .readingGrid {
+    width: 90%;
+  }
+  .aboutPadding {
+    padding-left: 48px;
+    padding-right: 48px;
+  }
+  .containerResume {
+    gap: 40px;
+  }
+  .imgKnow {
+    width: 420px;
+  }
+}
+
+/* ============================================================
+   820 - comeca o empilhamento
+   ============================================================ */
+@media (max-width: 820px) {
+  /* home nao pode ter altura travada em 100vh com overflow:hidden,
+     a barra do navegador mobile corta o conteudo */
+  .homeSection {
+    height: auto;
+    min-height: 100vh;
+    overflow: visible;
+    padding-bottom: 32px;
+  }
+
+  .headerTitleWrap {
+    margin: 24px 0 24px 16px;
+  }
+
+  .HomeMenu {
+    margin-top: 24px;
+  }
+
+  .homeActions {
+    margin-top: 28px;
+    margin-bottom: 28px;
+  }
+
+  .socialMedias {
+    gap: 32px;
+  }
+
+  /* --- about --- */
+  .aboutButtons {
+    font-size: 0.9rem;
+    text-align: center;
+  }
+
+  /* decorativo que empurrava a pagina pra fora da tela */
+  .circleDeco {
+    display: none;
+  }
+
+  .containerResume {
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 24px;
+  }
+
+  .imgAbout {
+    height: auto;
+    max-width: 180px;
+  }
+
+  .aboutPadding {
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 48px;
+    padding-bottom: 48px;
+  }
+
+  /* 4 paragrafos deixavam a secao comprida demais no celular.
+     max-height em vez de -webkit-line-clamp porque o clamp nao
+     funciona sobre varios <p> irmaos. */
+  .aboutTextBlock.clamped {
+    max-height: 15em;
+    overflow: hidden;
+  }
+
+  /* --- projetos --- */
+  .cards {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    width: 92%;
+    gap: 28px;
+  }
+
+  .descriptionInsideProject {
+    font-size: 12px;
+  }
+
+  .projectDescWrap {
+    padding: 20px 16px;
+  }
+
+  .projectOverlay {
+    overflow-y: auto;
+  }
+
+  /* --- experiencia --- */
+  .experienceLayout {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .experienceTabs {
+    flex-direction: row;
+    min-width: auto;
+    overflow-x: auto;
+    gap: 0;
+    scrollbar-width: none;
+  }
+  .experienceTabs::-webkit-scrollbar {
+    display: none;
+  }
+
+  .experienceWrapper {
+    width: 92%;
+  }
+
+  /* --- conhecimentos --- */
+  /* min-h-[1000px] + h-screen sobrava muito no celular */
+  .containerKnowledge {
+    height: auto;
+    min-height: 0;
+    padding: 56px 0;
+    overflow: visible;
+  }
+
+  .containerMenu {
+    flex-wrap: wrap;
+    height: auto;
+    padding: 24px;
+    gap: 10px;
+  }
+
+  /* padding empilhado deixava o painel estreito e comprido */
+  .menusKnowledge {
+    padding: 0 8px;
+  }
+
+  .knowledgeTableWrap {
+    width: 100%;
+    margin-top: 24px;
+    margin-bottom: 24px;
+  }
+
+  .containerTable {
+    width: 100%;
+    padding: 22px 14px;
+    gap: 22px;
+  }
+
+  .knowledgeChips {
+    gap: 6px;
+  }
+
+  .showMoreRow {
+    display: flex;
+  }
+
+  .knowledgeDesc.clamped {
+    display: -webkit-box;
+    -webkit-line-clamp: 7;
+    line-clamp: 7;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  /* --- leituras --- */
+  .readingSection {
+    padding: 0 16px;
+  }
+
+  .readingGrid {
+    width: 100%;
+    gap: 20px;
+  }
+
+  /* --- contato --- */
+  .contactOuter {
+    margin-left: 0;
+    padding: 0 20px 24px;
+  }
+
+  .contactContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+  }
+
+  .gifPc {
+    width: 70%;
+    max-width: 320px;
+    height: auto;
+  }
+}
+
+/* ============================================================
+   640 - todos os telefones (antes isso vivia em 425, e telefone
+   grande tipo iPhone Pro Max = 430px caia fora)
+   ============================================================ */
+@media (max-width: 640px) {
+  /* --- projetos --- */
+  .cards {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+    width: 92%;
+    gap: 24px;
+    padding: 0;
+  }
+
+  .projectActions {
+    gap: 28px;
+  }
+
+  .projectTechs {
+    gap: 14px;
+  }
+
+  .projectOverlay .descriptionInsideProject {
+    font-size: 12px;
+  }
+
+  /* --- conhecimentos --- */
+  .menusKnowledge {
+    display: initial;
+    margin: 16px 0;
+    padding: 0 6px;
+  }
+
+  .containerMenu {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    gap: 8px;
+    width: 100%;
+    height: auto;
+    margin-top: 24px;
+    box-shadow: none;
+  }
+
+  .containerTable {
+    padding: 20px 12px;
+    gap: 18px;
+  }
+
+  .knowledgeDesc {
+    text-align: left;
+  }
+
+  .knowledgeDesc.clamped {
+    -webkit-line-clamp: 8;
+    line-clamp: 8;
+  }
+
+  .knowledgeChips > span {
+    font-size: 0.7rem;
+    padding: 4px 9px;
+  }
+
+  .imgKnow {
+    width: 300px;
+  }
+
+  /* --- leituras --- */
+  .readingGrid {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+    gap: 16px;
+  }
+
+  .readingTags > span {
+    font-size: 0.7rem;
+    padding: 4px 9px;
+  }
+
+  /* --- about --- */
+  .containerText {
+    text-align: center;
+    margin: 0 auto;
+    width: 100%;
+    padding: 8px 4px;
+  }
+
+  .imgAbout {
+    height: auto;
+    max-width: 150px;
+  }
+
+  .aboutPadding {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .aboutTextBlock.clamped {
+    max-height: 13em;
+  }
+
+  .buttonsAbout {
+    display: flex;
+    justify-content: center;
+  }
+
+  .aboutButtons {
+    justify-content: center;
+    gap: 16px;
+  }
+
+  /* --- contato / footer --- */
+  .buttonZap {
+    width: 150px;
+    height: 16px;
+  }
+
+  .gifPc {
+    width: 78%;
+    max-width: 260px;
+  }
+
+  .containerFooter {
+    gap: 12px;
+    flex-direction: column;
+    padding-bottom: 32px;
+    text-align: center;
+  }
+
+  .disquete {
+    width: 110px;
+    padding: 0;
+  }
+
+  .ButtonDown {
+    width: 44px;
+    height: 44px;
+  }
+}
+
+/* ============================================================
+   400 - telefones pequenos
+   ============================================================ */
+@media (max-width: 400px) {
+  .containerText {
+    margin: 0;
+    padding: 4px 0;
+  }
+
+  .socialMedias {
+    gap: 24px;
+  }
+
+  .projectActions {
+    gap: 18px;
+  }
+
+  .projectDescWrap {
+    padding: 14px 10px;
+  }
+
+  .readingTags > span {
+    font-size: 0.66rem;
+    padding: 4px 8px;
+  }
+
+  .knowledgeChips > span {
+    font-size: 0.66rem;
+    padding: 4px 8px;
+  }
+
+  .containerFooter {
+    width: 100%;
+    gap: 10px;
+    flex-direction: column;
+    display: flex;
+  }
 }

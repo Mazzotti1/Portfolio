@@ -1,21 +1,17 @@
 import {CaretDown} from "phosphor-react"
 import { TextHome } from "./HomeStyles";
-import {  animateScroll as scroll  } from 'react-scroll';
+import { scrollToSection } from '../../utils/scrollToSection';
 
 export function ButtonDown() {
   const handleClick = () => {
-
-     scroll.scrollTo(948, {
-            duration: 700,
-
-          });
+    scrollToSection('About');
   };
 
 
     return(
 
         <div >
-            <button  onClick={handleClick}>
+            <button aria-label="Descer para a proxima secao" onClick={handleClick}>
             <TextHome>
               <CaretDown alt="Botão para descer de seção" size={60} className="ButtonDown hover:translate-y-5 hover:text-fonteVerde transition " weight="thin" />
              </TextHome>

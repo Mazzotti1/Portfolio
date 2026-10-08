@@ -5,7 +5,7 @@ export function SocialMedias(){
     return(
     <div>
         <TextHome>
-        <div className="flex  items-center gap-10">
+        <div className="socialMedias flex  items-center gap-10">
         <a href="https://www.instagram.com/omazzotti_/" target={'_blank'}>
         <InstagramLogo alt='Icone do instagram' size={32} className=" hover:text-red-700 hover:-translate-y-2 transition" weight="thin"  />
         </a>

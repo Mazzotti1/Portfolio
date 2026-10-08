@@ -20,10 +20,10 @@ export const Experience: React.FC<Props> = ({ language }) => {
     <ContainerExperience>
       <div className="experienceWrapper w-4/6 m-auto">
         <ExperienceInner>
-        <h1 className="text-fonteVerde text-4xl mb-12 font-bold">{labels[lang]}</h1>
+        <h1 className="experienceTittle text-fonteVerde text-4xl mb-12 font-bold">{labels[lang]}</h1>
 
         <div className="experienceLayout flex gap-12">
-          <div className="experienceTabs flex flex-col" style={{ minWidth: '220px' }}>
+          <div className="experienceTabs flex flex-col">
             {experiences.map((exp, i) => (
               <TabButton
                 key={exp.company}

@@ -4,6 +4,10 @@ export const ContainerExperience = styled.div`
   padding: 60px 0;
   position: relative;
   z-index: 10;
+
+  @media (max-width: 820px) {
+    padding: 32px 0;
+  }
 `;
 
 export const ExperienceInner = styled.div`
@@ -12,6 +16,10 @@ export const ExperienceInner = styled.div`
     : 'rgba(255, 255, 255, 0.85)'};
   border-radius: 12px;
   padding: 40px;
+
+  @media (max-width: 820px) {
+    padding: 24px 18px;
+  }
 `;
 
 export const TabButton = styled.button<{ $active: boolean }>`
@@ -28,6 +36,15 @@ export const TabButton = styled.button<{ $active: boolean }>`
   width: 100%;
   opacity: ${props => props.$active ? 1 : 0.5};
 
+  @media (max-width: 820px) {
+    width: auto;
+    white-space: nowrap;
+    padding: 12px 16px;
+    font-size: 0.85rem;
+    border-left: none;
+    border-bottom: 3px solid ${props => props.$active ? '#1F9114' : 'transparent'};
+  }
+
   &:hover {
     color: #1F9114;
     opacity: 1;
@@ -41,8 +58,9 @@ export const DetailContainer = styled.div`
   font-family: "JetBrains MONO";
 
   h3 {
-    font-size: 1.3rem;
+    font-size: clamp(1.05rem, 4.2vw, 1.3rem);
     font-weight: 700;
+    line-height: 1.35;
   }
 
   .date {
@@ -62,7 +80,7 @@ export const DetailContainer = styled.div`
     padding-left: 20px;
     margin-bottom: 14px;
     line-height: 1.7;
-    font-size: 0.9rem;
+    font-size: clamp(0.8rem, 3.1vw, 0.9rem);
     opacity: 0.8;
 
     &::before {

@@ -35,7 +35,7 @@ export const TypewriterEffect = (props: {language: string }) => {
             <span ref={el} />
           </div>
 
-                 <div className="btn text-fonteVerde text-2xl transition-colors mb-5  mt-5  hover:text-black hover:bg-white border  " >
+                 <div className="btn homeActions text-fonteVerde text-2xl transition-colors mb-5  mt-5  hover:text-black hover:bg-white border  " >
                  <BorderHome className="transition-all duration-500 p-2">
                 <ButtonContact language={props.language}/>
                 </BorderHome>

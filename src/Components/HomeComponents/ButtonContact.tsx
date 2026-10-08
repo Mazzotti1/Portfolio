@@ -1,17 +1,15 @@
 
-import {  animateScroll as scroll  } from 'react-scroll';
 import {pt ,en} from "./LanguageHome"
+import { scrollToSection } from '../../utils/scrollToSection';
 
 interface ButtonProps{
   language: string,
 }
 
 export const ButtonContact:React.FC<ButtonProps> = ({ language }) => {
-  const handleClick = () => {
-    scroll.scrollTo(948 * 4, {
-      duration: 700,
-
-    });
+  const handleClick = (e: React.MouseEvent) => {
+    e.preventDefault();
+    scrollToSection('contact');
   }
 
 
@@ -19,7 +17,7 @@ export const ButtonContact:React.FC<ButtonProps> = ({ language }) => {
 
         <div >
 
-              <a className="scroll-smooth cursor-pointer" href='#contato' onClick={handleClick}  >{language === 'pt' ? pt.ButtonContact : en.ButtonContact}</a>
+              <a className="scroll-smooth cursor-pointer" href='#contact' onClick={handleClick}  >{language === 'pt' ? pt.ButtonContact : en.ButtonContact}</a>
 
         </div>
 

@@ -23,7 +23,9 @@ export const pt = {
     P4Highlight: 'invenções com eletrônica',
     P4After: ', explorando novas ideias e soluções criativas.',
 
-    ButtonContact: "Me contate",
+    ButtonContact: "Converse comigo",
+    ShowMore: "Mostrar mais",
+    ShowLess: "Mostrar menos",
     DownloadCv: "Baixar currículo",
     Graduations: "Formações",
     jobs: "Trabalhos com Wordpress",
@@ -55,6 +57,8 @@ export const pt = {
     P4After: ', exploring new ideas and creative solutions.',
 
     ButtonContact: "Contact me",
+    ShowMore: "Show more",
+    ShowLess: "Show less",
     DownloadCv: "Download Resume",
     Graduations: "Graduations",
     jobs: "Wordpress jobs",

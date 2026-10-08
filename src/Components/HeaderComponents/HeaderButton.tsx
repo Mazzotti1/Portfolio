@@ -4,7 +4,7 @@ import "../../styles/Sidebar.css";
 import { Container } from "../HomeComponents/HomeStyles";
 import {  TextHeader, HeaderButtonPlus, ContainerHeader, SubContainerHeader,  } from "./HeaderStyles";
 
-import {Plus, Gear, Envelope, User, X, BookBookmark, Moon, Sun} from 'phosphor-react'
+import {Plus, Gear, Envelope, User, X, BookBookmark, BookOpen, Moon, Sun} from 'phosphor-react'
 import logo from "../../assets/disquete.gif";
 
 
@@ -14,7 +14,7 @@ import Switch from 'react-switch'
 import {useContext} from 'react'
 import {pt, en} from './LanguagesHeader'
 
-import {  animateScroll as scroll  } from 'react-scroll';
+import { scrollToSection, SectionId } from '../../utils/scrollToSection';
 
 
 interface Props {
@@ -28,7 +28,7 @@ interface Props {
 export const HeaderButton: React.FC<Props> = ({ toggleTheme, changeLanguage, language }) => {
 
   const [isOpenButton, setIsOpenButton] = useState<boolean>(false);
-  const [isOpenBar, setIsOpenBar] = useState<boolean>(true);
+  const [isSidebarOpen, setIsSidebarOpen] = useState<boolean>(false);
   const theme = useContext(ThemeContext);
 
   if (!theme) throw new Error("ThemeContext is not available");
@@ -36,31 +36,16 @@ export const HeaderButton: React.FC<Props> = ({ toggleTheme, changeLanguage, lan
   const { colors, title } = theme;
 
   const toggleSidebar = () =>{
-    setIsOpenBar(!isOpenBar);
-
+    // fecha o menu flutuante junto: no mobile ele ficava aberto por
+    // cima da sidebar, que tem z-index menor
+    setIsOpenButton(false);
+    setIsSidebarOpen(!isSidebarOpen);
   }
 
-  const AboutButton = () => {
-    scroll.scrollTo(948, {
-      duration: 700,
-
-    });
-
-  }
-
-  const ProjectButton = () => {
-    scroll.scrollTo(948 * 2, {
-      duration: 700,
-
-    });
-
-  }
-  const ContactButton = () => {
-    scroll.scrollTo(948 * 4, {
-      duration: 700,
-
-    });
-
+  // navega e fecha o menu flutuante (no mobile ele cobriria a secao de destino)
+  const goTo = (section: SectionId) => () => {
+    setIsOpenButton(false);
+    scrollToSection(section);
   }
 
 
@@ -73,11 +58,10 @@ export const HeaderButton: React.FC<Props> = ({ toggleTheme, changeLanguage, lan
 
     <>
     <ContainerHeader>
-<aside className={`sidebar  ${isOpenBar ? "open " : ""}`}>
 
-    <div  className={ `botaodoMenu fab mr-96 opacity-25 hover:opacity-100 mt-10 transition-all duration-500 ${isOpenButton ? "open" : ""}`}>
+    <div className={`botaodoMenu fab opacity-25 hover:opacity-100 ${isOpenButton ? "open" : ""} ${isSidebarOpen ? "sidebar-open" : ""}`}>
 
-<button  className=" ButtonPlus  hover:text-black hover:bg-zinc-600"  onClick={() =>  setIsOpenButton(!isOpenButton)}>
+<button aria-label="Abrir navegacao" className=" ButtonPlus  hover:text-black hover:bg-zinc-600"  onClick={() =>  setIsOpenButton(!isOpenButton)}>
 <HeaderButtonPlus>
   <Plus alt="Botão da navegação" size={30}/>
 </HeaderButtonPlus>
@@ -87,15 +71,19 @@ export const HeaderButton: React.FC<Props> = ({ toggleTheme, changeLanguage, lan
 
 <div className="menu absolute ButtonPlus ">
 
-  <button  onClick={AboutButton}>
+  <button  onClick={goTo('About')}>
   <User  className="text-black" size={32} weight="thin" />
     <span>{language === 'pt' ? pt.AboutButton : en.AboutButton}</span>
   </button>
-  <button onClick={ProjectButton}>
+  <button onClick={goTo('projects')}>
   <BookBookmark className="text-black" size={32} weight="thin" />
     <span> {language === 'pt' ? pt.ProjectButton : en.ProjectButton}</span>
   </button>
-  <button onClick={ContactButton}>
+  <button onClick={goTo('reading')}>
+  <BookOpen className="text-black" size={32} weight="thin" />
+    <span>{language === 'pt' ? pt.ReadingButton : en.ReadingButton}</span>
+  </button>
+  <button onClick={goTo('contact')}>
   <Envelope className="text-black" size={32} weight="thin" />
     <span>{language === 'pt' ? pt.ContactButton : en.ContactButton}</span>
   </button>
@@ -111,11 +99,13 @@ export const HeaderButton: React.FC<Props> = ({ toggleTheme, changeLanguage, lan
 </TextHeader>
 </div>
 
-<button onClick={toggleSidebar}><X size={32} className="closeSideBar border text-white hover:text-black hover:bg-white" weight="thin" /></button>
+<aside className={`sidebar  ${isSidebarOpen ? "open " : ""}`}>
+
+    <button aria-label="Fechar configuracoes" onClick={toggleSidebar}><X size={32} className="closeSideBar border text-white hover:text-black hover:bg-white" weight="thin" /></button>
 
     <Gear size={42} className="text-white mt-20 mb-4" weight="thin" />
     <label className="create-label ">{language === 'pt' ? pt.Configs : en.Configs}</label>
-    <label className="flex mt-10 mb-5  justify-center font-500 text-xs text-white">WHITE MODE / DARK MODE</label>
+    <label className="sidebarModeLabel flex mt-10 mb-5  justify-center font-500 text-xs text-white">WHITE MODE / DARK MODE</label>
     <div className="flex gap-3 mb-3">
     <Sun  className="text-white" size={18} weight="bold" />
     <Moon  className="text-white" size={18} weight="bold" />
@@ -144,7 +134,7 @@ export const HeaderButton: React.FC<Props> = ({ toggleTheme, changeLanguage, lan
       </nav>
 
       <div className="flex flex-col items-center mt-10">
-      <h1  className="text-white font-500 text-sm" >{language === 'pt' ? pt.LanguageButton : en.LanguageButton}</h1>
+      <h1  className="text-white font-500 text-sm text-center" >{language === 'pt' ? pt.LanguageButton : en.LanguageButton}</h1>
       <div className='text-white flex gap-7'>
       <button className='hover:opacity-30' onClick={() => changeLanguage('pt')}>
       <img alt="Bandeira do brasil" className='w-10' src="https://img.icons8.com/color/256/brazil.png"/>

@@ -11,7 +11,7 @@ interface Props {
 export const Contact: React.FC<Props> = ({language }) => {
     return(
       <ContainerContact>
-        <div id="contact" className="contactContainer ml-10 h-max  ">
+        <div id="contact" className="contactOuter contactContainer ml-10 h-max  ">
 
           <div className="flex contactContainer  justify-evenly">
                 <div >

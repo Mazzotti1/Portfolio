@@ -8,6 +8,7 @@ import Home  from './Components/HomeComponents/Home'
 import { AboutMe } from './Components/AboutMe/AboutMe'
 
 import { Knowledges } from './Components/knowledges/Knowledges'
+import { Reading } from './Components/Reading/Reading'
 import { Contact } from './Components/Contact/Contact'
 import { Footer } from './Components/Footer/Footer'
 import { BackToTop } from './Components/BackToTop/BackToTop'
@@ -48,6 +49,7 @@ function App() {
 
               <ProjectList language={language} title={''} thumb={''} techs={[]} gif_id={''} link={''} git={''} description={''} />
               <Knowledges language={language} />
+              <Reading language={language} />
               <Contact language={language} />
               <Footer language={language}  />
               <BackToTop  />
