@@ -4,7 +4,7 @@ import "../../styles/Sidebar.css";
 import { Container } from "../HomeComponents/HomeStyles";
 import {  TextHeader, HeaderButtonPlus, ContainerHeader, SubContainerHeader,  } from "./HeaderStyles";
 
-import {Plus, Gear, Envelope, User, X, BookBookmark, BookOpen, Moon, Sun} from 'phosphor-react'
+import {Plus, Gear, Envelope, User, X, BookBookmark, BookOpen, Star, Moon, Sun} from 'phosphor-react'
 import logo from "../../assets/disquete.gif";
 
 
@@ -74,6 +74,10 @@ export const HeaderButton: React.FC<Props> = ({ toggleTheme, changeLanguage, lan
   <button  onClick={goTo('About')}>
   <User  className="text-black" size={32} weight="thin" />
     <span>{language === 'pt' ? pt.AboutButton : en.AboutButton}</span>
+  </button>
+  <button onClick={goTo('featured')}>
+  <Star className="text-black" size={32} weight="thin" />
+    <span>{language === 'pt' ? pt.FeaturedButton : en.FeaturedButton}</span>
   </button>
   <button onClick={goTo('projects')}>
   <BookBookmark className="text-black" size={32} weight="thin" />

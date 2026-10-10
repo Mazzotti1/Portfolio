@@ -3,6 +3,7 @@ import { scroller } from 'react-scroll';
 export type SectionId =
   | 'home'
   | 'About'
+  | 'featured'
   | 'projects'
   | 'knowledges'
   | 'reading'

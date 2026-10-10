@@ -70,7 +70,8 @@
 .TittleSecProjects,
 .tittleKnowledge,
 .titleContact,
-.readingTittle {
+.readingTittle,
+.featuredTittle {
   font-size: clamp(2rem, 7.5vw, 3rem);
   line-height: 1.1;
 }
@@ -141,6 +142,9 @@
     width: 90%;
   }
   .readingGrid {
+    width: 90%;
+  }
+  .featuredPanel {
     width: 90%;
   }
   .aboutPadding {
@@ -313,6 +317,21 @@
     overflow: hidden;
   }
 
+  /* --- destaque --- */
+  .featuredSection {
+    padding: 0 12px;
+  }
+
+  .featuredPanel {
+    width: 100%;
+  }
+
+  /* video ao lado do texto nao cabe: empilha */
+  .featuredLayout {
+    flex-direction: column;
+    gap: 24px;
+  }
+
   /* --- leituras --- */
   .readingSection {
     padding: 0 16px;
@@ -410,6 +429,15 @@
 
   .imgKnow {
     width: 300px;
+  }
+
+  /* --- destaque --- */
+  .featuredMetrics {
+    gap: 14px;
+  }
+
+  .featuredTechs {
+    gap: 12px;
   }
 
   /* --- leituras --- */

@@ -4,6 +4,7 @@ import './styles/Global.css'
 import './styles/medias/medias.css'
 
 import  ProjectList from './Components/Projects/Projetos'
+import { Featured } from './Components/Featured/Featured'
 import Home  from './Components/HomeComponents/Home'
 import { AboutMe } from './Components/AboutMe/AboutMe'
 
@@ -47,6 +48,7 @@ function App() {
               <HeaderButton toggleTheme={toggleTheme} changeLanguage={changeLanguage} language={language}/>
               <AboutMe language={language} />
 
+              <Featured language={language} />
               <ProjectList language={language} title={''} thumb={''} techs={[]} gif_id={''} link={''} git={''} description={''} />
               <Knowledges language={language} />
               <Reading language={language} />
