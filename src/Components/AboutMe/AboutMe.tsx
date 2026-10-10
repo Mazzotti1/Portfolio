@@ -1,7 +1,7 @@
 import { useState } from "react"
 
 import imgStyle from "../../assets/circle.svg"
-import perfil from "../../assets/perfil.png";
+import perfil from "../../assets/corpo_inteiro.png";
 
 import { ContainerAbout, TextAbout, BorderAbout } from "./AboutStyle";
 import { ShowMoreButton } from "../../styles/ShowMoreButton";
@@ -26,7 +26,7 @@ export const AboutMe: React.FC<Props> = ({language }) => {
         <div id="About" className="h-full flex">
            <div className="containerResume flex justify-center items-center gap-28 w-full aboutPadding">
             <img className="circleDeco absolute right-3/4 opacity-40 translate-y-96" src={imgStyle} alt="Imagem circulo" />
-            <img alt="Foto de perfil" src={perfil} className="imgAbout h-2/3 rounded-3xl shadow-md hover:shadow-gray-400 hover:scale-110 transition-all relative z-10" data-anime="top" />
+            <img alt="Gabriel Mazzotti apresentando em um evento" src={perfil} className="imgAbout rounded-3xl shadow-md hover:shadow-gray-400 hover:scale-110 transition-all relative z-10" data-anime="top" />
 
             <div className="containerText flex flex-col">
               <h1 className="aboutTittle text-fonteVerde text-4xl mb-8 font-bold">{t.TittleAbout}</h1>

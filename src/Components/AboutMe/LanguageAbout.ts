@@ -1,7 +1,7 @@
 export const pt = {
     TittleAbout: 'Sobre mim',
 
-    P1Before: 'Meu nome é Gabriel, tenho 23 anos, sou graduando em ',
+    P1Before: 'Meu nome é Gabriel, tenho 24 anos, sou graduando em ',
     P1Highlight: 'Ciência da Computação',
     P1After: ' e trabalho como desenvolvedor fullstack, com foco em ',
     P1Highlight2: 'engenharia de backend',
@@ -34,7 +34,7 @@ export const pt = {
   export const en = {
     TittleAbout: 'About Me',
 
-    P1Before: "My name is Gabriel, I'm 23 years old, currently pursuing a degree in ",
+    P1Before: "My name is Gabriel, I'm 24 years old, currently pursuing a degree in ",
     P1Highlight: 'Computer Science',
     P1After: ', and I work as a fullstack developer with a focus on ',
     P1Highlight2: 'backend engineering',

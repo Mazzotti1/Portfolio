@@ -19,6 +19,17 @@
   min-width: 220px;
 }
 
+/* Foto do "Sobre mim". A antiga era quadrada (460x460) e 220px bastava;
+   a atual e corpo inteiro em 1036x1908 (proporcao 0.543), entao precisa
+   de mais largura pro rosto continuar legivel.
+   Esta regra base tambem cobre telas > 1440px, que antes nao tinham
+   nenhum max-width -- com a foto antiga de 460px passava, com 1036px nao. */
+.imgAbout {
+  width: 100%;
+  max-width: 280px;
+  height: auto;
+}
+
 /* Miniatura de projeto (img ou video).
    NAO usar width:100%: varios gifs sao pequenos no original
    (hatlas/guesstheflag/barbercut = 100px de largura) e esticar destroi
@@ -90,8 +101,7 @@
     width: 500px;
   }
   .imgAbout {
-    height: auto;
-    max-width: 220px;
+    max-width: 260px;
   }
   /* Arquitetura e Infra tem texto longo: 40% virava coluna
      estreita e alta demais pra ler */
@@ -143,6 +153,9 @@
   .imgKnow {
     width: 420px;
   }
+  .imgAbout {
+    max-width: 240px;
+  }
 }
 
 /* ============================================================
@@ -193,8 +206,7 @@
   }
 
   .imgAbout {
-    height: auto;
-    max-width: 180px;
+    max-width: 220px;
   }
 
   .aboutPadding {
@@ -420,8 +432,7 @@
   }
 
   .imgAbout {
-    height: auto;
-    max-width: 150px;
+    max-width: 190px;
   }
 
   .aboutPadding {
