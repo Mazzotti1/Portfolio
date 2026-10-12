@@ -1,0 +1,43 @@
+name: Deploy
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+concurrency:
+  group: deploy
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: npm
+
+      - run: npm ci
+      - run: npm run build
+
+      - name: Configurar SSH
+        run: |
+          mkdir -p ~/.ssh
+          printf '%s\n' "${{ secrets.VPS_SSH_KEY }}" > ~/.ssh/id_deploy
+          chmod 600 ~/.ssh/id_deploy
+          printf '%s\n' "${{ secrets.VPS_KNOWN_HOSTS }}" > ~/.ssh/known_hosts
+
+      # A chave no servidor é restrita com rrsync: o destino "/" é /srv/portfolio/dist.
+      # O --chmod mantém os arquivos graváveis pelo grupo, para o ubuntu também conseguir mexer.
+      - name: Enviar dist
+        run: |
+          rsync -rlvz --delete --chmod=D2775,F664 \
+            -e "ssh -i ~/.ssh/id_deploy -o BatchMode=yes" \
+            dist/ "portfolio@${{ secrets.VPS_HOST }}:/"
+
+      - name: Checar o site
+        run: curl -fsS --max-time 15 -o /dev/null https://gabrielmazzotti.com.br/
