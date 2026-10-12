@@ -1,0 +1,57 @@
+# ===================================================================
+# Apache / cPanel (public_html)
+# Todo bloco esta dentro de <IfModule> de proposito: se o modulo nao
+# estiver habilitado no servidor, a diretiva e ignorada em vez de
+# derrubar o site com erro 500.
+# ===================================================================
+
+# --- SPA: rotas do React Router ------------------------------------
+# Sem isto, abrir gabrielmazzotti.com.br/qualquer-coisa faz o Apache
+# procurar um arquivo com esse nome, nao achar e devolver o 404 DELE.
+# A rota "*" do React (o componente NotFound) nunca seria alcancada.
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteBase /
+
+  # arquivo ou diretorio que existe de verdade e servido direto
+  RewriteCond %{REQUEST_FILENAME} -f [OR]
+  RewriteCond %{REQUEST_FILENAME} -d
+  RewriteRule ^ - [L]
+
+  # todo o resto cai no index.html e o React Router resolve
+  RewriteRule ^ index.html [L]
+</IfModule>
+
+# --- Compressao ----------------------------------------------------
+# O bundle JS tem ~430KB e cai pra ~140KB com gzip.
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/plain text/xml text/css
+  AddOutputFilterByType DEFLATE application/javascript application/x-javascript
+  AddOutputFilterByType DEFLATE application/json image/svg+xml
+</IfModule>
+
+# --- Cache ---------------------------------------------------------
+# O Vite poe hash no nome de todo asset (index-6fad1711.js), entao
+# cache longo e seguro: build novo gera nome novo.
+# index.html NUNCA entra em cache longo, senao o visitante continua
+# baixando a versao antiga do site.
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresByType text/css "access plus 1 year"
+  ExpiresByType application/javascript "access plus 1 year"
+  ExpiresByType image/png "access plus 1 year"
+  ExpiresByType image/gif "access plus 1 year"
+  ExpiresByType image/svg+xml "access plus 1 year"
+  ExpiresByType video/mp4 "access plus 1 year"
+  ExpiresByType font/woff2 "access plus 1 year"
+  ExpiresByType text/html "access plus 0 seconds"
+</IfModule>
+
+<IfModule mod_headers.c>
+  <FilesMatch "\.(js|css|png|gif|svg|mp4|woff2)$">
+    Header set Cache-Control "public, max-age=31536000, immutable"
+  </FilesMatch>
+  <FilesMatch "\.html$">
+    Header set Cache-Control "no-cache, must-revalidate"
+  </FilesMatch>
+</IfModule>

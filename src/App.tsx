@@ -14,6 +14,7 @@ import { Contact } from './Components/Contact/Contact'
 import { Footer } from './Components/Footer/Footer'
 import { BackToTop } from './Components/BackToTop/BackToTop'
 import { NotFound } from './Components/NotFound/NotFound'
+import { PrivacyPolicy } from './Components/Privacy/PrivacyPolicy'
 
 import { DefaultTheme, ThemeProvider } from 'styled-components'
 import light from './styles/themes/light'
@@ -57,6 +58,7 @@ function App() {
               <BackToTop  />
             </div>
           } />
+          <Route path="/privacy-policy" element={<PrivacyPolicy />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
