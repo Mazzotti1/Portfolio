@@ -41,5 +41,10 @@ jobs:
             -e "ssh -i ~/.ssh/id_deploy -o BatchMode=yes" \
             dist/ "portfolio@${{ secrets.VPS_HOST }}:/"
 
+      # Direto na VPS (--resolve), sem passar pelo Cloudflare: ele responde 403 para
+      # IPs do GitHub Actions. O certificado do domínio continua sendo validado.
       - name: Checar o site
-        run: curl -fsS --max-time 15 -o /dev/null https://gabrielmazzotti.com.br/
+        run: |
+          curl -fsS --max-time 15 -o /dev/null \
+            --resolve "gabrielmazzotti.com.br:443:${{ secrets.VPS_HOST }}" \
+            https://gabrielmazzotti.com.br/
